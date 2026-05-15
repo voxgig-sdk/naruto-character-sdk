@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "character": {
+      "CHARACTER00": {
+        "debut": {},
+        "family": {},
+        "id": "CHARACTER00",
+        "image": [],
+        "jutsu": [],
+        "name": "s73",
+        "nature_type": [],
+        "personal": {},
+        "rank": {},
+        "unique_trait": [],
+        "voice_actor": {}
+      },
+      "CHARACTER01": {
+        "debut": {},
+        "family": {},
+        "id": "CHARACTER01",
+        "image": [],
+        "jutsu": [],
+        "name": "se1",
+        "nature_type": [],
+        "personal": {},
+        "rank": {},
+        "unique_trait": [],
+        "voice_actor": {}
+      },
+      "CHARACTER02": {
+        "debut": {},
+        "family": {},
+        "id": "CHARACTER02",
+        "image": [],
+        "jutsu": [],
+        "name": "s14f",
+        "nature_type": [],
+        "personal": {},
+        "rank": {},
+        "unique_trait": [],
+        "voice_actor": {}
+      }
+    }
+  },
+  "new": {
+    "character": {
+      "character_ref01": {
+        "debut": {},
+        "family": {},
+        "image": [],
+        "jutsu": [],
+        "name": "s1bd",
+        "nature_type": [],
+        "personal": {},
+        "rank": {},
+        "unique_trait": [],
+        "voice_actor": {}
+      }
+    }
+  }
+}

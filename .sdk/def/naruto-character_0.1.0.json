@@ -1,0 +1,494 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Naruto Character API",
+    "description": "The NarutoDB API offers a detailed database of characters, clans, villages, and more from the Naruto anime and manga series. Users can access comprehensive information about each character, including their traits, jutsus, and affiliations, making it a valuable resource for fans and developers alike.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://narutodb.xyz/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://narutodb.xyz/api",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/character": {
+      "get": {
+        "summary": "Get all characters",
+        "description": "Retrieves a list of all Naruto characters from the database with pagination support",
+        "operationId": "getAllCharacters",
+        "tags": [
+          "Characters"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number for pagination",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of results per page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Filter characters by name",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of characters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "characters": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Character"
+                      }
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "totalCharacters": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/character/{id}": {
+      "get": {
+        "summary": "Get character by ID",
+        "description": "Retrieves detailed information about a specific Naruto character by their unique identifier",
+        "operationId": "getCharacterById",
+        "tags": [
+          "Characters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Unique identifier of the character",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with character details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Character"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Character not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/clan": {
+      "get": {
+        "summary": "Get all clans",
+        "description": "Retrieves a list of all clans from the Naruto universe",
+        "operationId": "getAllClans",
+        "tags": [
+          "Clans"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number for pagination",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of results per page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of clans",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "clans": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Clan"
+                      }
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "totalClans": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Character": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the character"
+          },
+          "name": {
+            "type": "string",
+            "description": "Character's name"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "description": "URLs to character images"
+          },
+          "debut": {
+            "type": "object",
+            "properties": {
+              "manga": {
+                "type": "string",
+                "description": "Manga chapter debut"
+              },
+              "anime": {
+                "type": "string",
+                "description": "Anime episode debut"
+              },
+              "novel": {
+                "type": "string",
+                "description": "Novel debut"
+              },
+              "movie": {
+                "type": "string",
+                "description": "Movie debut"
+              },
+              "game": {
+                "type": "string",
+                "description": "Game debut"
+              },
+              "ova": {
+                "type": "string",
+                "description": "OVA debut"
+              },
+              "appearsIn": {
+                "type": "string",
+                "description": "Media appearances"
+              }
+            }
+          },
+          "personal": {
+            "type": "object",
+            "properties": {
+              "birthdate": {
+                "type": "string",
+                "description": "Character's birthdate"
+              },
+              "sex": {
+                "type": "string",
+                "description": "Character's gender"
+              },
+              "age": {
+                "type": "object",
+                "description": "Character's age at different story points"
+              },
+              "height": {
+                "type": "object",
+                "description": "Character's height at different story points"
+              },
+              "weight": {
+                "type": "object",
+                "description": "Character's weight at different story points"
+              },
+              "bloodType": {
+                "type": "string",
+                "description": "Character's blood type"
+              },
+              "kekkeiGenkai": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Character's kekkei genkai abilities"
+              },
+              "classification": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Character classification (e.g., Jinchūriki, Sage)"
+              },
+              "tailedBeast": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Tailed beasts associated with the character"
+              },
+              "occupation": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Character's occupation(s)"
+              },
+              "affiliation": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Villages or organizations the character is affiliated with"
+              },
+              "team": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Teams the character belongs to"
+              },
+              "clan": {
+                "type": "string",
+                "description": "Character's clan"
+              }
+            }
+          },
+          "family": {
+            "type": "object",
+            "description": "Character's family members and relationships"
+          },
+          "rank": {
+            "type": "object",
+            "properties": {
+              "ninjaRank": {
+                "type": "object",
+                "description": "Character's ninja rank at different story points"
+              },
+              "ninjaRegistration": {
+                "type": "string",
+                "description": "Character's ninja registration number"
+              }
+            }
+          },
+          "jutsu": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of jutsus the character can perform"
+          },
+          "natureType": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Character's chakra nature types"
+          },
+          "uniqueTraits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Character's unique traits or abilities"
+          },
+          "voiceActors": {
+            "type": "object",
+            "properties": {
+              "japanese": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Japanese voice actors"
+              },
+              "english": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "English voice actors"
+              }
+            }
+          }
+        }
+      },
+      "Clan": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the clan"
+          },
+          "name": {
+            "type": "string",
+            "description": "Clan name"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "List of characters belonging to this clan"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "message": {
+            "type": "string",
+            "description": "Detailed error description"
+          },
+          "statusCode": {
+            "type": "integer",
+            "description": "HTTP status code"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Characters",
+      "description": "Operations related to Naruto characters"
+    },
+    {
+      "name": "Clans",
+      "description": "Operations related to Naruto clans"
+    }
+  ]
+}

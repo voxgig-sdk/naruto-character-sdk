@@ -1,0 +1,23 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 2
+  metrics: count: path: 3
+  metrics: count: method: 3
+
+  entity: character: {
+    path: "/character": {
+      op: list: method: *GET
+    }
+    path: "/character/{id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: clan: {
+    path: "/clan": {
+      op: list: method: *GET
+    }
+  }
+
+}
