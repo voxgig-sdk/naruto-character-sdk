@@ -3,7 +3,7 @@ package sdktest
 import (
 	"testing"
 
-	sdk "github.com/voxgig-sdk/naruto-character-sdk"
+	sdk "github.com/voxgig-sdk/naruto-character-sdk/go"
 )
 
 func TestCustomUtility(t *testing.T) {

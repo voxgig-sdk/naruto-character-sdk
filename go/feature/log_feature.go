@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/voxgig-sdk/naruto-character-sdk/core"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/core"
 )
 
 type LogFeature struct {

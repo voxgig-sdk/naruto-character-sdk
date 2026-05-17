@@ -1,10 +1,10 @@
 package voxgignarutocharactersdk
 
 import (
-	"github.com/voxgig-sdk/naruto-character-sdk/core"
-	"github.com/voxgig-sdk/naruto-character-sdk/entity"
-	"github.com/voxgig-sdk/naruto-character-sdk/feature"
-	_ "github.com/voxgig-sdk/naruto-character-sdk/utility"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/core"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/entity"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/feature"
+	_ "github.com/voxgig-sdk/naruto-character-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

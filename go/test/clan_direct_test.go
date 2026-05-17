@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/naruto-character-sdk"
-	"github.com/voxgig-sdk/naruto-character-sdk/core"
+	sdk "github.com/voxgig-sdk/naruto-character-sdk/go"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/core"
 )
 
 func TestClanDirect(t *testing.T) {

@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/naruto-character-sdk"
-	"github.com/voxgig-sdk/naruto-character-sdk/core"
+	sdk "github.com/voxgig-sdk/naruto-character-sdk/go"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/naruto-character-sdk/go/utility/struct"
 )
 
 func TestClanEntity(t *testing.T) {

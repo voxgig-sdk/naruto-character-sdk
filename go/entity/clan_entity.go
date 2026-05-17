@@ -1,9 +1,9 @@
 package entity
 
 import (
-	"github.com/voxgig-sdk/naruto-character-sdk/core"
+	"github.com/voxgig-sdk/naruto-character-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/naruto-character-sdk/go/utility/struct"
 )
 
 type ClanEntity struct {
