@@ -15,9 +15,6 @@ module NarutoCharacterConfig
       },
       "options" => {
         "base" => "https://narutodb.xyz/api",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },

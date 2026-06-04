@@ -116,14 +116,12 @@ def character_direct_setup(mockres)
   env = Runner.env_override({
     "NARUTOCHARACTER_TEST_CHARACTER_ENTID" => {},
     "NARUTOCHARACTER_TEST_LIVE" => "FALSE",
-    "NARUTOCHARACTER_APIKEY" => "NONE",
   })
 
   live = env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {
-      "apikey" => env["NARUTOCHARACTER_APIKEY"],
     }
     client = NarutoCharacterSDK.new(merged_opts)
     return {

@@ -92,7 +92,6 @@ function clan_basic_setup(extra)
     ["NARUTOCHARACTER_TEST_CLAN_ENTID"] = idmap,
     ["NARUTOCHARACTER_TEST_LIVE"] = "FALSE",
     ["NARUTOCHARACTER_TEST_EXPLAIN"] = "FALSE",
-    ["NARUTOCHARACTER_APIKEY"] = "NONE",
   })
 
   local idmap_resolved = helpers.to_map(
@@ -104,7 +103,6 @@ function clan_basic_setup(extra)
   if env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE" then
     local merged_opts = vs.merge({
       {
-        apikey = env["NARUTOCHARACTER_APIKEY"],
       },
       extra or {},
     })

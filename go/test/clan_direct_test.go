@@ -93,14 +93,12 @@ func clanDirectSetup(mockres any) *clanDirectSetupResult {
 	env := envOverride(map[string]any{
 		"NARUTOCHARACTER_TEST_CLAN_ENTID": map[string]any{},
 		"NARUTOCHARACTER_TEST_LIVE":    "FALSE",
-		"NARUTOCHARACTER_APIKEY":       "NONE",
 	})
 
 	live := env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["NARUTOCHARACTER_APIKEY"],
 		}
 		client := sdk.NewNarutoCharacterSDK(mergedOpts)
 

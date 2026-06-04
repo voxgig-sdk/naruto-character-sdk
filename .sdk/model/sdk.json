@@ -16,7 +16,16 @@
           }
         ],
         "title": "Naruto Character API",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "tagline": "Query characters, clans, villages, and teams from the Naruto anime and manga universe",
+        "homepage": "https://narutodb.xyz/api",
+        "docs_url": "https://narutodb.xyz/api",
+        "about_md": "The Naruto Character API (NarutoDB) is a community-maintained database covering characters, clans, villages, and teams from Masashi Kishimoto's *Naruto* anime and manga series. It is served from `https://narutodb.xyz/api` and indexed on community catalogues such as [Free Public APIs](https://freepublicapis.com/naruto-character-api).\n\nWhat you get from the API:\n\n- Character records with traits, jutsus, and affiliations\n- Clan groupings that organise characters by family or lineage\n- Village listings for the major hidden villages\n- Team rosters that group ninja into squads\n\nThe API is read-only and intended for fan apps, demos, and learning projects. CORS is reported as disabled across endpoints on community trackers, so browser-only callers may need a proxy. No authentication or documented rate limit is required at the time of writing.",
+        "entity_desc": {
+          "character": "An individual ninja or person from the Naruto universe, served from `https://narutodb.xyz/api/character`, with attributes such as traits, jutsus, and affiliations.",
+          "clan": "A family or lineage grouping that ties characters together by shared bloodline or heritage within the Naruto universe."
+        },
+        "auth": false
       },
       "config": {
         "auth": {
@@ -24,7 +33,15 @@
         },
         "headers": {
           "content-type": "application/json"
-        }
+        },
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ]
       },
       "entity": {
         "character": {
