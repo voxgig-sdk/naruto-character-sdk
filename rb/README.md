@@ -10,13 +10,13 @@ The Ruby SDK for the NarutoCharacter API — an entity-oriented client using idi
 
 ## Install
 ```bash
-gem install naruto-character-sdk
+gem install voxgig-sdk-naruto-character
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "naruto-character-sdk"
+gem "voxgig-sdk-naruto-character"
 ```
 
 Then run:

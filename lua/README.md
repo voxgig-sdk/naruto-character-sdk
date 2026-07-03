@@ -10,7 +10,7 @@ The Lua SDK for the NarutoCharacter API — an entity-oriented client using Lua 
 
 ## Install
 ```bash
-luarocks install naruto-character-sdk
+luarocks install voxgig-sdk-naruto-character
 ```
 
 If the module is not yet published, add the source directory to

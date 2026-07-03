@@ -10,7 +10,7 @@ The TypeScript SDK for the NarutoCharacter API — a type-safe, entity-oriented 
 
 ## Install
 ```bash
-npm install naruto-character
+npm install @voxgig-sdk/naruto-character
 ```
 ## Tutorial: your first API call
 

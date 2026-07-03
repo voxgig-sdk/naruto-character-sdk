@@ -10,7 +10,7 @@ The PHP SDK for the NarutoCharacter API — an entity-oriented client using PHP 
 
 ## Install
 ```bash
-composer require voxgig/naruto-character-sdk
+composer require voxgig-sdk/naruto-character
 ```
 
 

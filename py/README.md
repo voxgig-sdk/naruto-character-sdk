@@ -10,7 +10,7 @@ The Python SDK for the NarutoCharacter API — an entity-oriented client followi
 
 ## Install
 ```bash
-pip install naruto-character-sdk
+pip install voxgig-sdk-naruto-character
 ```
 
 Or install from source:
