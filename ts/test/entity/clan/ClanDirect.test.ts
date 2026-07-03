@@ -79,12 +79,14 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'NARUTOCHARACTER_TEST_CLAN_ENTID': {},
     'NARUTOCHARACTER_TEST_LIVE': 'FALSE',
+    'NARUTOCHARACTER_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.NARUTOCHARACTER_TEST_LIVE
 
   if (live) {
     const client = new NarutoCharacterSDK({
+      apikey: env.NARUTOCHARACTER_APIKEY,
     })
 
     let idmap: any = env['NARUTOCHARACTER_TEST_CLAN_ENTID']

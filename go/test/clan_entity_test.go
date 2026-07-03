@@ -119,6 +119,7 @@ func clanBasicSetup(extra map[string]any) *entityTestSetup {
 		"NARUTOCHARACTER_TEST_CLAN_ENTID": idmap,
 		"NARUTOCHARACTER_TEST_LIVE":      "FALSE",
 		"NARUTOCHARACTER_TEST_EXPLAIN":   "FALSE",
+		"NARUTOCHARACTER_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["NARUTOCHARACTER_TEST_CLAN_ENTID"])
@@ -129,6 +130,7 @@ func clanBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
+				"apikey": env["NARUTOCHARACTER_APIKEY"],
 			},
 			extra,
 		})

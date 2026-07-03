@@ -117,12 +117,14 @@ function character_direct_setup(mockres)
   local env = runner.env_override({
     ["NARUTOCHARACTER_TEST_CHARACTER_ENTID"] = {},
     ["NARUTOCHARACTER_TEST_LIVE"] = "FALSE",
+    ["NARUTOCHARACTER_APIKEY"] = "NONE",
   })
 
   local live = env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
+      apikey = env["NARUTOCHARACTER_APIKEY"],
     }
     local client = sdk.new(merged_opts)
     return {

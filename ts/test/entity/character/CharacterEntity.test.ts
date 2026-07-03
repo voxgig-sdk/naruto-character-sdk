@@ -120,6 +120,7 @@ function basicSetup(extra?: any) {
     'NARUTO_CHARACTER_TEST_CHARACTER_ENTID': idmap,
     'NARUTO_CHARACTER_TEST_LIVE': 'FALSE',
     'NARUTO_CHARACTER_TEST_EXPLAIN': 'FALSE',
+    'NARUTO_CHARACTER_APIKEY': 'NONE',
   })
 
   idmap = env['NARUTO_CHARACTER_TEST_CHARACTER_ENTID']
@@ -129,6 +130,7 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new NarutoCharacterSDK(merge([
       {
+        apikey: env.NARUTO_CHARACTER_APIKEY,
       },
       extra
     ]))
