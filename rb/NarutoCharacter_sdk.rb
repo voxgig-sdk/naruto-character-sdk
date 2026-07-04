@@ -208,26 +208,14 @@ class NarutoCharacterSDK
   end
 
 
-  # Idiomatic facade: client.character.list / client.character.load({ "id" => ... })
-  def character
-    require_relative 'entity/character_entity'
-    @character ||= CharacterEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.character instead.
+  # Canonical facade: client.Character.list / client.Character.load({ "id" => ... })
   def Character(data = nil)
     require_relative 'entity/character_entity'
     CharacterEntity.new(self, data)
   end
 
 
-  # Idiomatic facade: client.clan.list / client.clan.load({ "id" => ... })
-  def clan
-    require_relative 'entity/clan_entity'
-    @clan ||= ClanEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.clan instead.
+  # Canonical facade: client.Clan.list / client.Clan.load({ "id" => ... })
   def Clan(data = nil)
     require_relative 'entity/clan_entity'
     ClanEntity.new(self, data)

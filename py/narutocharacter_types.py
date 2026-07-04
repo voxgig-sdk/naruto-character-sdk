@@ -4,58 +4,57 @@
 # params (op.<name>.points[].args.params[]). Field/param types come from the
 # canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 # @voxgig/apidef VALID_CANON). Do not edit by hand.
+#
+# These are TypedDicts, not dataclasses: the SDK ops return/accept plain dicts
+# at runtime, and a TypedDict IS a dict shape, so the types match the runtime.
+# Optional (req:false) keys are modelled as TypedDict key-optionality
+# (total=False), split into a required base + total=False subclass when a type
+# has both required and optional keys.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Optional, Any
+from typing import TypedDict, Any
 
 
-@dataclass
-class Character:
-    debut: Optional[dict] = None
-    family: Optional[dict] = None
-    id: Optional[int] = None
-    image: Optional[list] = None
-    jutsu: Optional[list] = None
-    name: Optional[str] = None
-    nature_type: Optional[list] = None
-    personal: Optional[dict] = None
-    rank: Optional[dict] = None
-    unique_trait: Optional[list] = None
-    voice_actor: Optional[dict] = None
+class Character(TypedDict, total=False):
+    debut: dict
+    family: dict
+    id: int
+    image: list
+    jutsu: list
+    name: str
+    nature_type: list
+    personal: dict
+    rank: dict
+    unique_trait: list
+    voice_actor: dict
 
 
-@dataclass
-class CharacterLoadMatch:
+class CharacterLoadMatch(TypedDict):
     id: int
 
 
-@dataclass
-class CharacterListMatch:
-    debut: Optional[dict] = None
-    family: Optional[dict] = None
-    id: Optional[int] = None
-    image: Optional[list] = None
-    jutsu: Optional[list] = None
-    name: Optional[str] = None
-    nature_type: Optional[list] = None
-    personal: Optional[dict] = None
-    rank: Optional[dict] = None
-    unique_trait: Optional[list] = None
-    voice_actor: Optional[dict] = None
+class CharacterListMatch(TypedDict, total=False):
+    debut: dict
+    family: dict
+    id: int
+    image: list
+    jutsu: list
+    name: str
+    nature_type: list
+    personal: dict
+    rank: dict
+    unique_trait: list
+    voice_actor: dict
 
 
-@dataclass
-class Clan:
-    character: Optional[list] = None
-    id: Optional[int] = None
-    name: Optional[str] = None
+class Clan(TypedDict, total=False):
+    character: list
+    id: int
+    name: str
 
 
-@dataclass
-class ClanListMatch:
-    character: Optional[list] = None
-    id: Optional[int] = None
-    name: Optional[str] = None
-
+class ClanListMatch(TypedDict, total=False):
+    character: list
+    id: int
+    name: str

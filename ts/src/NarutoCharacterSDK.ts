@@ -205,28 +205,14 @@ class NarutoCharacterSDK {
 
 
 
-  _character?: CharacterEntity
-
-  // Idiomatic facade: `client.character.list()` / `client.character.load({ id })`.
-  get character(): CharacterEntity {
-    return (this._character ??= new CharacterEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.character` instead. */
+  // Entity access: `client.Character().list()` / `client.Character().load({ id })`.
   Character(data?: any) {
     const self = this
     return new CharacterEntity(self,data)
   }
 
 
-  _clan?: ClanEntity
-
-  // Idiomatic facade: `client.clan.list()` / `client.clan.load({ id })`.
-  get clan(): ClanEntity {
-    return (this._clan ??= new ClanEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.clan` instead. */
+  // Entity access: `client.Clan().list()` / `client.Clan().load({ id })`.
   Clan(data?: any) {
     const self = this
     return new ClanEntity(self,data)

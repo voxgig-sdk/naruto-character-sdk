@@ -220,41 +220,21 @@ class NarutoCharacterSDK:
         }
 
 
-    @property
-    def character(self):
-        """Idiomatic facade: client.character.list() / client.character.load({"id": ...})."""
-        from entity.character_entity import CharacterEntity
-        cached = getattr(self, "_character", None)
-        if cached is None:
-            cached = CharacterEntity(self, None)
-            self._character = cached
-        return cached
-
-    def Character(self, data=None):
-        # Deprecated: use client.character instead.
+    def Character(self, data=None) -> "CharacterEntity":
+        """Entity factory: client.Character().list({}) / client.Character().load({"id": ...})."""
         from entity.character_entity import CharacterEntity
         return CharacterEntity(self, data)
 
 
-    @property
-    def clan(self):
-        """Idiomatic facade: client.clan.list() / client.clan.load({"id": ...})."""
-        from entity.clan_entity import ClanEntity
-        cached = getattr(self, "_clan", None)
-        if cached is None:
-            cached = ClanEntity(self, None)
-            self._clan = cached
-        return cached
-
-    def Clan(self, data=None):
-        # Deprecated: use client.clan instead.
+    def Clan(self, data=None) -> "ClanEntity":
+        """Entity factory: client.Clan().list({}) / client.Clan().load({"id": ...})."""
         from entity.clan_entity import ClanEntity
         return ClanEntity(self, data)
 
 
 
     @classmethod
-    def test(cls, testopts=None, sdkopts=None):
+    def test(cls, testopts=None, sdkopts=None) -> "NarutoCharacterSDK":
         if sdkopts is None:
             sdkopts = {}
         sdkopts = vs.clone(sdkopts)
@@ -274,3 +254,10 @@ class NarutoCharacterSDK:
         sdk.mode = "test"
 
         return sdk
+
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from entity.character_entity import CharacterEntity
+    from entity.clan_entity import ClanEntity

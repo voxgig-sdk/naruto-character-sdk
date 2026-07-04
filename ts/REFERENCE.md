@@ -121,7 +121,7 @@ Alias for `NarutoCharacterSDK.test()`.
 ## CharacterEntity
 
 ```ts
-const character = client.character
+const character = client.Character()
 ```
 
 ### Fields
@@ -147,7 +147,7 @@ const character = client.character
 List entities matching the given criteria. Returns an array.
 
 ```ts
-const results = await client.character.list()
+const results = await client.Character().list()
 ```
 
 #### `load(match: object, ctrl?: object)`
@@ -155,7 +155,7 @@ const results = await client.character.list()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.character.load({ id: 'character_id' })
+const result = await client.Character().load({ id: 'character_id' })
 ```
 
 ### Common Methods
@@ -189,7 +189,7 @@ Return a copy of the entity options.
 ## ClanEntity
 
 ```ts
-const clan = client.clan
+const clan = client.Clan()
 ```
 
 ### Fields
@@ -207,7 +207,7 @@ const clan = client.clan
 List entities matching the given criteria. Returns an array.
 
 ```ts
-const results = await client.clan.list()
+const results = await client.Clan().list()
 ```
 
 ### Common Methods
