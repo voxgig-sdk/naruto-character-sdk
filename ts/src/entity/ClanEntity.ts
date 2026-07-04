@@ -14,9 +14,13 @@ import type {
   Control,
 } from '../types'
 
+import type {
+  Clan,
+  ClanListMatch,
+} from '../NarutoCharacterTypes'
 
 // TODO: needs Entity superclass
-class ClanEntity extends NarutoCharacterEntityBase {
+class ClanEntity extends NarutoCharacterEntityBase<Clan> {
 
   constructor(client: NarutoCharacterSDK, entopts: any) {
     super(client, entopts)
@@ -33,7 +37,7 @@ class ClanEntity extends NarutoCharacterEntityBase {
 
 
 
-  async list(this: any, reqmatch?: any, ctrl?: Control) {
+  async list(this: any, reqmatch?: ClanListMatch, ctrl?: Control): Promise<Clan[]> {
 
     const utility = this._utility
 
@@ -133,7 +137,9 @@ class ClanEntity extends NarutoCharacterEntityBase {
         throw err
       }
       else {
-        return undefined
+        // Off-happy-path (throw disabled): typed as any so the method's
+        // Promise<Clan[]> return stays clean under strict null checks.
+        return undefined as any
       }
     }
   }

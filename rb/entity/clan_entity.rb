@@ -45,6 +45,7 @@ class ClanEntity
     end
   end
 
+  # @return [Clan, Hash] the current Clan data
   def data_get
     @_utility.feature_hook.call(@_entctx, "GetData")
     VoxgigStruct.clone(@_data)
@@ -57,6 +58,7 @@ class ClanEntity
     end
   end
 
+  # @return [Hash] the current match filter (any subset of Clan fields)
   def match_get
     @_utility.feature_hook.call(@_entctx, "GetMatch")
     VoxgigStruct.clone(@_match)
@@ -65,6 +67,11 @@ class ClanEntity
   
 
   
+  # List Clan items matching the given filter.
+  #
+  # @param reqmatch [ClanListMatch, Hash, nil] match filter (any subset of Clan fields)
+  # @param ctrl [Object, nil] optional per-call control
+  # @return [Array<Clan>, Array] the matching Clan items; raises NarutoCharacterError on failure
   def list(reqmatch, ctrl = nil)
     utility = @_utility
     ctx = utility.make_context.call({

@@ -15,9 +15,6 @@ module NarutoCharacterConfig
       },
       "options" => {
         "base" => "https://narutodb.xyz/api",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },
@@ -181,6 +178,7 @@ module NarutoCharacterConfig
                         "orig" => "id",
                         "reqd" => true,
                         "type" => "`$INTEGER`",
+                        "index$" => 0,
                       },
                     ],
                   },

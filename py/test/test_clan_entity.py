@@ -50,8 +50,7 @@ class TestClanEntity:
         clan_ref01_ent = client.Clan(None)
         clan_ref01_match = {}
 
-        clan_ref01_list_result, err = clan_ref01_ent.list(clan_ref01_match, None)
-        assert err is None
+        clan_ref01_list_result = clan_ref01_ent.list(clan_ref01_match, None)
         assert isinstance(clan_ref01_list_result, list)
 
 
@@ -92,7 +91,6 @@ def _clan_basic_setup(extra):
         "NARUTOCHARACTER_TEST_CLAN_ENTID": idmap,
         "NARUTOCHARACTER_TEST_LIVE": "FALSE",
         "NARUTOCHARACTER_TEST_EXPLAIN": "FALSE",
-        "NARUTOCHARACTER_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -103,7 +101,6 @@ def _clan_basic_setup(extra):
     if env.get("NARUTOCHARACTER_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("NARUTOCHARACTER_APIKEY"),
             },
             extra or {},
         ])

@@ -55,6 +55,9 @@ class ClanEntity
         return new ClanEntity($this->_client, $opts);
     }
 
+    /**
+     * @param Clan|array $args Clan data (assoc-array) to store.
+     */
     public function data_set($args): void
     {
         if ($args) {
@@ -63,12 +66,18 @@ class ClanEntity
         }
     }
 
+    /**
+     * @return Clan|array The current Clan data as an assoc-array.
+     */
     public function data_get()
     {
         ($this->_utility->feature_hook)($this->_entctx, "GetData");
         return Struct::clone($this->_data);
     }
 
+    /**
+     * @param array $args Match filter (any subset of Clan fields).
+     */
     public function match_set($args): void
     {
         if ($args) {
@@ -77,6 +86,9 @@ class ClanEntity
         }
     }
 
+    /**
+     * @return array The current match filter (any subset of Clan fields).
+     */
     public function match_get()
     {
         ($this->_utility->feature_hook)($this->_entctx, "GetMatch");
@@ -86,7 +98,16 @@ class ClanEntity
     
 
     
-    public function list($reqmatch, $ctrl = null): array
+    /**
+     * List Clan items matching the given filter.
+     *
+     * @param ClanListMatch|array|null $reqmatch Match filter (any subset
+     *   of Clan fields) as an assoc-array; ClanListMatch names the shape.
+     * @param mixed $ctrl Optional per-call control overrides.
+     * @return Clan[]|array A list of Clan items as assoc-arrays at
+     *   the SDK boundary; throws NarutoCharacterError on failure (item-5 convention).
+     */
+    public function list(?array $reqmatch = null, $ctrl = null): mixed
     {
         $utility = $this->_utility;
         $ctx = ($utility->make_context)([
@@ -114,7 +135,7 @@ class ClanEntity
 
     
 
-    private function _run_op($ctx, callable $post_done): array
+    private function _run_op($ctx, callable $post_done): mixed
     {
         $utility = $this->_utility;
 

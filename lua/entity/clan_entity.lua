@@ -81,6 +81,10 @@ end
 
 
 
+---@param reqmatch ClanListMatch
+---@param ctrl? table
+---@return Clan[]
+---@return string? err
 function ClanEntity:list(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

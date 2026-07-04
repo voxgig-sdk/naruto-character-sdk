@@ -244,12 +244,38 @@ end
 
 
 
+-- Idiomatic facade: client:character():list() / client:character():load({ id = ... })
+function NarutoCharacterSDK:character(data)
+  local EntityMod = require("entity.character_entity")
+  if data == nil then
+    if self._character == nil then
+      self._character = EntityMod.new(self, nil)
+    end
+    return self._character
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:character() instead.
 function NarutoCharacterSDK:Character(data)
   local EntityMod = require("entity.character_entity")
   return EntityMod.new(self, data)
 end
 
 
+-- Idiomatic facade: client:clan():list() / client:clan():load({ id = ... })
+function NarutoCharacterSDK:clan(data)
+  local EntityMod = require("entity.clan_entity")
+  if data == nil then
+    if self._clan == nil then
+      self._clan = EntityMod.new(self, nil)
+    end
+    return self._clan
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:clan() instead.
 function NarutoCharacterSDK:Clan(data)
   local EntityMod = require("entity.clan_entity")
   return EntityMod.new(self, data)

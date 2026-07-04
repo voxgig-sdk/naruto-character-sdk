@@ -245,11 +245,17 @@ func (sdk *NarutoCharacterSDK) Direct(fetchargs map[string]any) (map[string]any,
 }
 
 
+// Character returns a Character entity bound to this client.
+// Idiomatic usage: client.Character(nil).List(nil, nil) or
+// client.Character(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *NarutoCharacterSDK) Character(data map[string]any) NarutoCharacterEntity {
 	return NewCharacterEntityFunc(sdk, data)
 }
 
 
+// Clan returns a Clan entity bound to this client.
+// Idiomatic usage: client.Clan(nil).List(nil, nil) or
+// client.Clan(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *NarutoCharacterSDK) Clan(data map[string]any) NarutoCharacterEntity {
 	return NewClanEntityFunc(sdk, data)
 }

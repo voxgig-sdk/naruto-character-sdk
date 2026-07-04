@@ -43,8 +43,7 @@ class ClanEntityTest < Minitest::Test
     clan_ref01_ent = client.Clan(nil)
     clan_ref01_match = {}
 
-    clan_ref01_list_result, err = clan_ref01_ent.list(clan_ref01_match, nil)
-    assert_nil err
+    clan_ref01_list_result = clan_ref01_ent.list(clan_ref01_match, nil)
     assert clan_ref01_list_result.is_a?(Array)
 
   end
@@ -83,7 +82,6 @@ def clan_basic_setup(extra)
     "NARUTOCHARACTER_TEST_CLAN_ENTID" => idmap,
     "NARUTOCHARACTER_TEST_LIVE" => "FALSE",
     "NARUTOCHARACTER_TEST_EXPLAIN" => "FALSE",
-    "NARUTOCHARACTER_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +93,6 @@ def clan_basic_setup(extra)
   if env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["NARUTOCHARACTER_APIKEY"],
       },
       extra || {},
     ])

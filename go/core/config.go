@@ -14,9 +14,6 @@ func MakeConfig() map[string]any {
 		},
 		"options": map[string]any{
 			"base": "https://narutodb.xyz/api",
-			"auth": map[string]any{
-				"prefix": "Bearer",
-			},
 			"headers": map[string]any{
 				"content-type": "application/json",
 			},
@@ -180,6 +177,7 @@ func MakeConfig() map[string]any {
 											"orig": "id",
 											"reqd": true,
 											"type": "`$INTEGER`",
+											"index$": 0,
 										},
 									},
 								},

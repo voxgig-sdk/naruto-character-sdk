@@ -50,8 +50,7 @@ class ClanEntityTest extends TestCase
         $clan_ref01_ent = $client->Clan(null);
         $clan_ref01_match = [];
 
-        [$clan_ref01_list_result, $err] = $clan_ref01_ent->list($clan_ref01_match, null);
-        $this->assertNull($err);
+        $clan_ref01_list_result = $clan_ref01_ent->list($clan_ref01_match, null);
         $this->assertIsArray($clan_ref01_list_result);
 
     }
@@ -86,7 +85,6 @@ function clan_basic_setup($extra)
         "NARUTOCHARACTER_TEST_CLAN_ENTID" => $idmap,
         "NARUTOCHARACTER_TEST_LIVE" => "FALSE",
         "NARUTOCHARACTER_TEST_EXPLAIN" => "FALSE",
-        "NARUTOCHARACTER_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -98,7 +96,6 @@ function clan_basic_setup($extra)
     if ($env["NARUTOCHARACTER_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["NARUTOCHARACTER_APIKEY"],
             ],
             $extra ?? [],
         ]);

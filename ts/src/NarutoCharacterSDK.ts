@@ -3,6 +3,8 @@
 import { CharacterEntity } from './entity/CharacterEntity'
 import { ClanEntity } from './entity/ClanEntity'
 
+export type * from './NarutoCharacterTypes'
+
 
 import { inspect } from 'node:util'
 
@@ -203,12 +205,28 @@ class NarutoCharacterSDK {
 
 
 
+  _character?: CharacterEntity
+
+  // Idiomatic facade: `client.character.list()` / `client.character.load({ id })`.
+  get character(): CharacterEntity {
+    return (this._character ??= new CharacterEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.character` instead. */
   Character(data?: any) {
     const self = this
     return new CharacterEntity(self,data)
   }
 
 
+  _clan?: ClanEntity
+
+  // Idiomatic facade: `client.clan.list()` / `client.clan.load({ id })`.
+  get clan(): ClanEntity {
+    return (this._clan ??= new ClanEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.clan` instead. */
   Clan(data?: any) {
     const self = this
     return new ClanEntity(self,data)
