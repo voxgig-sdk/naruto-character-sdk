@@ -34,7 +34,7 @@ class CharacterLoadMatch
     public int $id;
 }
 
-/** Match filter for Character#list (any subset of Character fields). */
+/** Request payload for Character#list. */
 class CharacterListMatch
 {
     public ?array $debut = null;
@@ -58,7 +58,7 @@ class Clan
     public ?string $name = null;
 }
 
-/** Match filter for Clan#list (any subset of Clan fields). */
+/** Request payload for Clan#list. */
 class ClanListMatch
 {
     public ?array $character = null;

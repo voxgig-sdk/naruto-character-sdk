@@ -23,7 +23,19 @@ export interface CharacterLoadMatch {
   id: number
 }
 
-export type CharacterListMatch = Partial<Character>
+export interface CharacterListMatch {
+  debut?: Record<string, any>
+  family?: Record<string, any>
+  id?: number
+  image?: any[]
+  jutsu?: any[]
+  name?: string
+  nature_type?: any[]
+  personal?: Record<string, any>
+  rank?: Record<string, any>
+  unique_trait?: any[]
+  voice_actor?: Record<string, any>
+}
 
 export interface Clan {
   character?: any[]
@@ -31,5 +43,9 @@ export interface Clan {
   name?: string
 }
 
-export type ClanListMatch = Partial<Clan>
+export interface ClanListMatch {
+  character?: any[]
+  id?: number
+  name?: string
+}
 

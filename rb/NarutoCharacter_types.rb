@@ -66,7 +66,7 @@ CharacterLoadMatch = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Character#list (any subset of Character fields).
+# Request payload for Character#list.
 #
 # @!attribute [rw] debut
 #   @return [Hash, nil]
@@ -132,7 +132,7 @@ Clan = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Clan#list (any subset of Clan fields).
+# Request payload for Clan#list.
 #
 # @!attribute [rw] character
 #   @return [Array, nil]

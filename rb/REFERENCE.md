@@ -8,7 +8,7 @@ Complete API reference for the NarutoCharacter Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'naruto-character_sdk'
+require_relative 'NarutoCharacter_sdk'
 
 client = NarutoCharacterSDK.new(options)
 ```
@@ -97,26 +97,26 @@ character = client.Character
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `debut` | ``$OBJECT`` | No |  |
-| `family` | ``$OBJECT`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$ARRAY`` | No |  |
-| `jutsu` | ``$ARRAY`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `nature_type` | ``$ARRAY`` | No |  |
-| `personal` | ``$OBJECT`` | No |  |
-| `rank` | ``$OBJECT`` | No |  |
-| `unique_trait` | ``$ARRAY`` | No |  |
-| `voice_actor` | ``$OBJECT`` | No |  |
+| `debut` | `Hash` | No |  |
+| `family` | `Hash` | No |  |
+| `id` | `Integer` | No |  |
+| `image` | `Array` | No |  |
+| `jutsu` | `Array` | No |  |
+| `name` | `String` | No |  |
+| `nature_type` | `Array` | No |  |
+| `personal` | `Hash` | No |  |
+| `rank` | `Hash` | No |  |
+| `unique_trait` | `Array` | No |  |
+| `voice_actor` | `Hash` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Character.list(nil)
+results = client.Character.list
 ```
 
 #### `load(reqmatch, ctrl = nil) -> result`
@@ -167,18 +167,18 @@ clan = client.Clan
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `character` | `Array` | No |  |
+| `id` | `Integer` | No |  |
+| `name` | `String` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Clan.list(nil)
+results = client.Clan.list
 ```
 
 ### Common Methods

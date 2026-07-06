@@ -94,17 +94,17 @@ local character = client:Character(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `debut` | ``$OBJECT`` | No |  |
-| `family` | ``$OBJECT`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$ARRAY`` | No |  |
-| `jutsu` | ``$ARRAY`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `nature_type` | ``$ARRAY`` | No |  |
-| `personal` | ``$OBJECT`` | No |  |
-| `rank` | ``$OBJECT`` | No |  |
-| `unique_trait` | ``$ARRAY`` | No |  |
-| `voice_actor` | ``$OBJECT`` | No |  |
+| `debut` | `table` | No |  |
+| `family` | `table` | No |  |
+| `id` | `number` | No |  |
+| `image` | `table` | No |  |
+| `jutsu` | `table` | No |  |
+| `name` | `string` | No |  |
+| `nature_type` | `table` | No |  |
+| `personal` | `table` | No |  |
+| `rank` | `table` | No |  |
+| `unique_trait` | `table` | No |  |
+| `voice_actor` | `table` | No |  |
 
 ### Operations
 
@@ -164,9 +164,9 @@ local clan = client:Clan(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `character` | `table` | No |  |
+| `id` | `number` | No |  |
+| `name` | `string` | No |  |
 
 ### Operations
 

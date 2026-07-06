@@ -8,7 +8,7 @@ Complete API reference for the NarutoCharacter PHP SDK.
 ### Constructor
 
 ```php
-require_once __DIR__ . '/naruto-character_sdk.php';
+require_once __DIR__ . '/narutocharacter_sdk.php';
 
 $client = new NarutoCharacterSDK($options);
 ```
@@ -49,11 +49,11 @@ Create a new `CharacterEntity` instance. Pass `null` for no initial data.
 
 Create a new `ClanEntity` instance. Pass `null` for no initial data.
 
-#### `optionsMap(): array`
+#### `options_map(): array`
 
 Return a deep copy of the current SDK options.
 
-#### `getUtility(): ProjectNameUtility`
+#### `get_utility(): NarutoCharacterUtility`
 
 Return a copy of the SDK utility object.
 
@@ -96,26 +96,26 @@ $character = $client->Character();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `debut` | ``$OBJECT`` | No |  |
-| `family` | ``$OBJECT`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$ARRAY`` | No |  |
-| `jutsu` | ``$ARRAY`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `nature_type` | ``$ARRAY`` | No |  |
-| `personal` | ``$OBJECT`` | No |  |
-| `rank` | ``$OBJECT`` | No |  |
-| `unique_trait` | ``$ARRAY`` | No |  |
-| `voice_actor` | ``$OBJECT`` | No |  |
+| `debut` | `array` | No |  |
+| `family` | `array` | No |  |
+| `id` | `int` | No |  |
+| `image` | `array` | No |  |
+| `jutsu` | `array` | No |  |
+| `name` | `string` | No |  |
+| `nature_type` | `array` | No |  |
+| `personal` | `array` | No |  |
+| `rank` | `array` | No |  |
+| `unique_trait` | `array` | No |  |
+| `voice_actor` | `array` | No |  |
 
 ### Operations
 
-#### `list(array $reqmatch, ?array $ctrl = null): mixed`
+#### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`
 
-List entities matching the given criteria. Returns an array. Throws on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Throws on error.
 
 ```php
-$results = $client->Character()->list([]);
+$results = $client->Character()->list();
 ```
 
 #### `load(array $reqmatch, ?array $ctrl = null): mixed`
@@ -128,19 +128,19 @@ $result = $client->Character()->load(["id" => "character_id"]);
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -149,7 +149,7 @@ Set the entity match criteria.
 Create a new `CharacterEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 
@@ -166,35 +166,35 @@ $clan = $client->Clan();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `character` | `array` | No |  |
+| `id` | `int` | No |  |
+| `name` | `string` | No |  |
 
 ### Operations
 
-#### `list(array $reqmatch, ?array $ctrl = null): mixed`
+#### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`
 
-List entities matching the given criteria. Returns an array. Throws on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Throws on error.
 
 ```php
-$results = $client->Clan()->list([]);
+$results = $client->Clan()->list();
 ```
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -203,7 +203,7 @@ Set the entity match criteria.
 Create a new `ClanEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 

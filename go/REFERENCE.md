@@ -101,17 +101,17 @@ character := client.Character(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `debut` | ``$OBJECT`` | No |  |
-| `family` | ``$OBJECT`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$ARRAY`` | No |  |
-| `jutsu` | ``$ARRAY`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `nature_type` | ``$ARRAY`` | No |  |
-| `personal` | ``$OBJECT`` | No |  |
-| `rank` | ``$OBJECT`` | No |  |
-| `unique_trait` | ``$ARRAY`` | No |  |
-| `voice_actor` | ``$OBJECT`` | No |  |
+| `debut` | `map[string]any` | No |  |
+| `family` | `map[string]any` | No |  |
+| `id` | `int` | No |  |
+| `image` | `[]any` | No |  |
+| `jutsu` | `[]any` | No |  |
+| `name` | `string` | No |  |
+| `nature_type` | `[]any` | No |  |
+| `personal` | `map[string]any` | No |  |
+| `rank` | `map[string]any` | No |  |
+| `unique_trait` | `[]any` | No |  |
+| `voice_actor` | `map[string]any` | No |  |
 
 ### Operations
 
@@ -165,9 +165,9 @@ clan := client.Clan(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `character` | `[]any` | No |  |
+| `id` | `int` | No |  |
+| `name` | `string` | No |  |
 
 ### Operations
 

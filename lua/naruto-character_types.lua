@@ -23,6 +23,17 @@
 ---@field id number
 
 ---@class CharacterListMatch
+---@field debut? table
+---@field family? table
+---@field id? number
+---@field image? table
+---@field jutsu? table
+---@field name? string
+---@field nature_type? table
+---@field personal? table
+---@field rank? table
+---@field unique_trait? table
+---@field voice_actor? table
 
 ---@class Clan
 ---@field character? table
@@ -30,6 +41,9 @@
 ---@field name? string
 
 ---@class ClanListMatch
+---@field character? table
+---@field id? number
+---@field name? string
 
 local M = {}
 

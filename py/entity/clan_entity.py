@@ -66,8 +66,12 @@ class ClanEntity:
     
 
     
-    def list(self, reqmatch: ClanListMatch, ctrl=None) -> list[Clan]:
+    def list(self, reqmatch=None, ctrl=None) -> list[Clan]:
         utility = self._utility
+        # reqmatch is optional: an omitted match lists all records. Treat None
+        # as an empty match so client.Clan().list() works with no args.
+        if reqmatch is None:
+            reqmatch = {}
         ctx = utility.make_context({
             "opname": "list",
             "ctrl": ctrl,

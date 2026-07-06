@@ -128,17 +128,17 @@ const character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `debut` | ``$OBJECT`` | No |  |
-| `family` | ``$OBJECT`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$ARRAY`` | No |  |
-| `jutsu` | ``$ARRAY`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `nature_type` | ``$ARRAY`` | No |  |
-| `personal` | ``$OBJECT`` | No |  |
-| `rank` | ``$OBJECT`` | No |  |
-| `unique_trait` | ``$ARRAY`` | No |  |
-| `voice_actor` | ``$OBJECT`` | No |  |
+| `debut` | `Record<string, any>` | No |  |
+| `family` | `Record<string, any>` | No |  |
+| `id` | `number` | No |  |
+| `image` | `any[]` | No |  |
+| `jutsu` | `any[]` | No |  |
+| `name` | `string` | No |  |
+| `nature_type` | `any[]` | No |  |
+| `personal` | `Record<string, any>` | No |  |
+| `rank` | `Record<string, any>` | No |  |
+| `unique_trait` | `any[]` | No |  |
+| `voice_actor` | `Record<string, any>` | No |  |
 
 ### Operations
 
@@ -155,7 +155,7 @@ const results = await client.Character().list()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Character().load({ id: 'character_id' })
+const result = await client.Character().load({ id: 1 })
 ```
 
 ### Common Methods
@@ -196,9 +196,9 @@ const clan = client.Clan()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `character` | `any[]` | No |  |
+| `id` | `number` | No |  |
+| `name` | `string` | No |  |
 
 ### Operations
 

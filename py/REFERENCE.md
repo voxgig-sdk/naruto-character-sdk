@@ -8,7 +8,7 @@ Complete API reference for the NarutoCharacter Python SDK.
 ### Constructor
 
 ```python
-from naruto-character_sdk import NarutoCharacterSDK
+from narutocharacter_sdk import NarutoCharacterSDK
 
 client = NarutoCharacterSDK(options)
 ```
@@ -91,26 +91,26 @@ character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `debut` | ``$OBJECT`` | No |  |
-| `family` | ``$OBJECT`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$ARRAY`` | No |  |
-| `jutsu` | ``$ARRAY`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `nature_type` | ``$ARRAY`` | No |  |
-| `personal` | ``$OBJECT`` | No |  |
-| `rank` | ``$OBJECT`` | No |  |
-| `unique_trait` | ``$ARRAY`` | No |  |
-| `voice_actor` | ``$OBJECT`` | No |  |
+| `debut` | `dict` | No |  |
+| `family` | `dict` | No |  |
+| `id` | `int` | No |  |
+| `image` | `list` | No |  |
+| `jutsu` | `list` | No |  |
+| `name` | `str` | No |  |
+| `nature_type` | `list` | No |  |
+| `personal` | `dict` | No |  |
+| `rank` | `dict` | No |  |
+| `unique_trait` | `list` | No |  |
+| `voice_actor` | `dict` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Character().list({})
+results = client.Character().list()
 for character in results:
     print(character)
 ```
@@ -162,18 +162,18 @@ clan = client.Clan()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `character` | `list` | No |  |
+| `id` | `int` | No |  |
+| `name` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Clan().list({})
+results = client.Clan().list()
 for clan in results:
     print(clan)
 ```

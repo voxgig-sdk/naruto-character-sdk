@@ -221,13 +221,13 @@ class NarutoCharacterSDK:
 
 
     def Character(self, data=None) -> "CharacterEntity":
-        """Entity factory: client.Character().list({}) / client.Character().load({"id": ...})."""
+        """Entity factory: client.Character().list() / client.Character().load({"id": ...})."""
         from entity.character_entity import CharacterEntity
         return CharacterEntity(self, data)
 
 
     def Clan(self, data=None) -> "ClanEntity":
-        """Entity factory: client.Clan().list({}) / client.Clan().load({"id": ...})."""
+        """Entity factory: client.Clan().list() / client.Clan().load({"id": ...})."""
         from entity.clan_entity import ClanEntity
         return ClanEntity(self, data)
 

@@ -28,8 +28,7 @@ type CharacterLoadMatch struct {
 	Id int `json:"id"`
 }
 
-// CharacterListMatch mirrors the character fields as an all-optional match
-// filter (Go analog of Partial<Character>).
+// CharacterListMatch is the typed request payload for Character.ListTyped.
 type CharacterListMatch struct {
 	Debut *map[string]any `json:"debut,omitempty"`
 	Family *map[string]any `json:"family,omitempty"`
@@ -51,8 +50,7 @@ type Clan struct {
 	Name *string `json:"name,omitempty"`
 }
 
-// ClanListMatch mirrors the clan fields as an all-optional match
-// filter (Go analog of Partial<Clan>).
+// ClanListMatch is the typed request payload for Clan.ListTyped.
 type ClanListMatch struct {
 	Character *[]any `json:"character,omitempty"`
 	Id *int `json:"id,omitempty"`
