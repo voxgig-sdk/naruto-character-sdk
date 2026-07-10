@@ -120,7 +120,7 @@ for character in results:
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Character().load({"id": "character_id"})
+result = client.Character().load({"id": 1})
 ```
 
 ### Common Methods

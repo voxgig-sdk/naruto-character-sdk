@@ -95,6 +95,7 @@ same parameters as `Direct()`.
 
 ```go
 character := client.Character(nil)
+fmt.Println(character.GetName()) // "character"
 ```
 
 ### Fields
@@ -121,6 +122,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Character(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 #### `Load(reqmatch, ctrl map[string]any) (any, error)`
@@ -128,7 +133,11 @@ results, err := client.Character(nil).List(nil, nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Character(nil).Load(map[string]any{"id": "character_id"}, nil)
+result, err := client.Character(nil).Load(map[string]any{"id": 1}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
 ```
 
 ### Common Methods
@@ -159,6 +168,7 @@ Return the entity name.
 
 ```go
 clan := client.Clan(nil)
+fmt.Println(clan.GetName()) // "clan"
 ```
 
 ### Fields
@@ -177,6 +187,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Clan(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 ### Common Methods

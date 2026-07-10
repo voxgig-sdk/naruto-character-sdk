@@ -50,7 +50,7 @@ try {
 ```php
 try {
     // load() returns the bare Character record (throws on error).
-    $character = $client->Character()->load(["id" => "example_id"]);
+    $character = $client->Character()->load(["id" => 1]);
     print_r($character);
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
@@ -327,7 +327,7 @@ Create an instance: `$character = $client->Character();`
 
 ```php
 // load() returns the bare Character record (throws on error).
-$character = $client->Character()->load(["id" => "character_id"]);
+$character = $client->Character()->load(["id" => 1]);
 ```
 
 #### Example: List

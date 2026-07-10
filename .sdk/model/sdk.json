@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -455,14 +452,17 @@
           "url": "https://narutodb.xyz/"
         },
         "description": "The NarutoDB API offers a detailed database of characters, clans, villages, and more from the Naruto anime and manga series. Users can access comprehensive information about each character, including their traits, jutsus, and affiliations, making it a valuable resource for fans and developers alike.",
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://narutodb.xyz/api"
           }
         ],
+        "summary": "The NarutoDB API offers a detailed database of characters, clans, villages, and more from the Naruto anime and manga series.",
         "title": "Naruto Character API",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "website": "https://narutodb.xyz"
       },
       "option": {},
       "target": {
@@ -515,6 +515,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -565,6 +568,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },

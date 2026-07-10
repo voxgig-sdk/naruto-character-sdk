@@ -15,9 +15,9 @@ main: {
           url: "https://narutodb.xyz/api"
         }
       ]
+      summary: "The NarutoDB API offers a detailed database of characters, clans, villages, and more from the Naruto anime and manga series."
       title: "Naruto Character API"
       version: "1.0.0"
+      website: "https://narutodb.xyz"
     }
   }
-}
-

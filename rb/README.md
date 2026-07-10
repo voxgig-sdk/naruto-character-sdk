@@ -49,7 +49,7 @@ end
 ```ruby
 begin
   # load returns the bare Character record (raises on error).
-  character = client.Character.load({ "id" => "example_id" })
+  character = client.Character.load({ "id" => 1 })
   puts character
 rescue => err
   warn "load failed: #{err}"
@@ -317,7 +317,7 @@ Create an instance: `character = client.Character`
 
 ```ruby
 # load returns the bare Character record (raises on error).
-character = client.Character.load({ "id" => "character_id" })
+character = client.Character.load({ "id" => 1 })
 ```
 
 #### Example: List

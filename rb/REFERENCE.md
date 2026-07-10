@@ -124,7 +124,7 @@ results = client.Character.list
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Character.load({ "id" => "character_id" })
+result = client.Character.load({ "id" => 1 })
 ```
 
 ### Common Methods
