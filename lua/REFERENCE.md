@@ -97,14 +97,14 @@ local character = client:Character(nil)
 | `debut` | `table` | No |  |
 | `family` | `table` | No |  |
 | `id` | `number` | No |  |
-| `image` | `table` | No |  |
+| `images` | `table` | No |  |
 | `jutsu` | `table` | No |  |
 | `name` | `string` | No |  |
-| `nature_type` | `table` | No |  |
+| `natureType` | `table` | No |  |
 | `personal` | `table` | No |  |
 | `rank` | `table` | No |  |
-| `unique_trait` | `table` | No |  |
-| `voice_actor` | `table` | No |  |
+| `uniqueTraits` | `table` | No |  |
+| `voiceActors` | `table` | No |  |
 
 ### Operations
 
@@ -164,7 +164,7 @@ local clan = client:Clan(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | `table` | No |  |
+| `characters` | `table` | No |  |
 | `id` | `number` | No |  |
 | `name` | `string` | No |  |
 

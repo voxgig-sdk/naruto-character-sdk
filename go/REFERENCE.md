@@ -105,14 +105,14 @@ fmt.Println(character.GetName()) // "character"
 | `debut` | `map[string]any` | No |  |
 | `family` | `map[string]any` | No |  |
 | `id` | `int` | No |  |
-| `image` | `[]any` | No |  |
+| `images` | `[]any` | No |  |
 | `jutsu` | `[]any` | No |  |
 | `name` | `string` | No |  |
-| `nature_type` | `[]any` | No |  |
+| `natureType` | `[]any` | No |  |
 | `personal` | `map[string]any` | No |  |
 | `rank` | `map[string]any` | No |  |
-| `unique_trait` | `[]any` | No |  |
-| `voice_actor` | `map[string]any` | No |  |
+| `uniqueTraits` | `[]any` | No |  |
+| `voiceActors` | `map[string]any` | No |  |
 
 ### Operations
 
@@ -175,7 +175,7 @@ fmt.Println(clan.GetName()) // "clan"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | `[]any` | No |  |
+| `characters` | `[]any` | No |  |
 | `id` | `int` | No |  |
 | `name` | `string` | No |  |
 

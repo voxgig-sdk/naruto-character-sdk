@@ -18,14 +18,14 @@ class Character
     public ?array $debut = null;
     public ?array $family = null;
     public ?int $id = null;
-    public ?array $image = null;
+    public ?array $images = null;
     public ?array $jutsu = null;
     public ?string $name = null;
-    public ?array $nature_type = null;
+    public ?array $natureType = null;
     public ?array $personal = null;
     public ?array $rank = null;
-    public ?array $unique_trait = null;
-    public ?array $voice_actor = null;
+    public ?array $uniqueTraits = null;
+    public ?array $voiceActors = null;
 }
 
 /** Request payload for Character#load. */
@@ -40,20 +40,20 @@ class CharacterListMatch
     public ?array $debut = null;
     public ?array $family = null;
     public ?int $id = null;
-    public ?array $image = null;
+    public ?array $images = null;
     public ?array $jutsu = null;
     public ?string $name = null;
-    public ?array $nature_type = null;
+    public ?array $natureType = null;
     public ?array $personal = null;
     public ?array $rank = null;
-    public ?array $unique_trait = null;
-    public ?array $voice_actor = null;
+    public ?array $uniqueTraits = null;
+    public ?array $voiceActors = null;
 }
 
 /** Clan entity data model. */
 class Clan
 {
-    public ?array $character = null;
+    public ?array $characters = null;
     public ?int $id = null;
     public ?string $name = null;
 }
@@ -61,7 +61,7 @@ class Clan
 /** Request payload for Clan#list. */
 class ClanListMatch
 {
-    public ?array $character = null;
+    public ?array $characters = null;
     public ?int $id = null;
     public ?string $name = null;
 }

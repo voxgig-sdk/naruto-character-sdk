@@ -26,8 +26,8 @@ import {
 describe('ClanEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when NARUTOCHARACTER_TEST_LIVE=TRUE.
-  afterEach(liveDelay('NARUTOCHARACTER_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when NARUTO_CHARACTER_TEST_LIVE=TRUE.
+  afterEach(liveDelay('NARUTO_CHARACTER_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = NarutoCharacterSDK.test()
@@ -63,7 +63,7 @@ describe('ClanEntity', async () => {
     const clan_ref01_ent = client.Clan()
     const clan_ref01_match: any = {}
 
-    const clan_ref01_list = await clan_ref01_ent.list(clan_ref01_match)
+    const clan_ref01_list = (await clan_ref01_ent.list(clan_ref01_match)).map((e: any) => e.data())
 
 
   })

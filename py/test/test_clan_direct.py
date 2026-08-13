@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from narutocharacter_sdk.utility.voxgig_struct import voxgig_struct as vs
 from narutocharacter_sdk import NarutoCharacterSDK
-from core import helpers
+from narutocharacter_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _clan_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "NARUTOCHARACTER_TEST_CLAN_ENTID": {},
-        "NARUTOCHARACTER_TEST_LIVE": "FALSE",
+        "NARUTO_CHARACTER_TEST_CLAN_ENTID": {},
+        "NARUTO_CHARACTER_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("NARUTOCHARACTER_TEST_LIVE") == "TRUE"
+    live = env.get("NARUTO_CHARACTER_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

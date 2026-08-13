@@ -37,7 +37,7 @@ class ClanEntity extends NarutoCharacterEntityBase<Clan> {
 
 
 
-  async list(this: any, reqmatch?: ClanListMatch, ctrl?: Control): Promise<Clan[]> {
+  async list(this: any, reqmatch?: ClanListMatch, ctrl?: Control): Promise<ClanEntity[]> {
 
     const utility = this._utility
 

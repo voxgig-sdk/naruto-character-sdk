@@ -100,14 +100,14 @@ character = client.Character
 | `debut` | `Hash` | No |  |
 | `family` | `Hash` | No |  |
 | `id` | `Integer` | No |  |
-| `image` | `Array` | No |  |
+| `images` | `Array` | No |  |
 | `jutsu` | `Array` | No |  |
 | `name` | `String` | No |  |
-| `nature_type` | `Array` | No |  |
+| `natureType` | `Array` | No |  |
 | `personal` | `Hash` | No |  |
 | `rank` | `Hash` | No |  |
-| `unique_trait` | `Array` | No |  |
-| `voice_actor` | `Hash` | No |  |
+| `uniqueTraits` | `Array` | No |  |
+| `voiceActors` | `Hash` | No |  |
 
 ### Operations
 
@@ -167,7 +167,7 @@ clan = client.Clan
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | `Array` | No |  |
+| `characters` | `Array` | No |  |
 | `id` | `Integer` | No |  |
 | `name` | `String` | No |  |
 

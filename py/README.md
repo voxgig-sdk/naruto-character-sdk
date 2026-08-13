@@ -52,7 +52,7 @@ except Exception as err:
 
 ### 3. Load a character
 
-`load()` returns the bare record (a `dict`) and raises on error.
+`load()` returns the ENTITY — call data_get() for the record — and raises on error.
 
 ```python
 try:
@@ -136,7 +136,8 @@ Create a mock client for unit testing — no server required:
 ```python
 client = NarutoCharacterSDK.test()
 
-# Entity ops return the bare record and raise on error.
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
 character = client.Character().list()
 # character contains the mock response record
 ```
@@ -234,7 +235,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -259,14 +260,14 @@ On error, `ok` is `False` and `err` contains the error value.
 | `debut` |  |
 | `family` |  |
 | `id` |  |
-| `image` |  |
+| `images` |  |
 | `jutsu` |  |
 | `name` |  |
-| `nature_type` |  |
+| `natureType` |  |
 | `personal` |  |
 | `rank` |  |
-| `unique_trait` |  |
-| `voice_actor` |  |
+| `uniqueTraits` |  |
+| `voiceActors` |  |
 
 Operations: List, Load.
 
@@ -276,7 +277,7 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `character` |  |
+| `characters` |  |
 | `id` |  |
 | `name` |  |
 
@@ -307,14 +308,14 @@ Create an instance: `character = client.Character()`
 | `debut` | `dict` |  |
 | `family` | `dict` |  |
 | `id` | `int` |  |
-| `image` | `list` |  |
+| `images` | `list` |  |
 | `jutsu` | `list` |  |
 | `name` | `str` |  |
-| `nature_type` | `list` |  |
+| `natureType` | `list` |  |
 | `personal` | `dict` |  |
 | `rank` | `dict` |  |
-| `unique_trait` | `list` |  |
-| `voice_actor` | `dict` |  |
+| `uniqueTraits` | `list` |  |
+| `voiceActors` | `dict` |  |
 
 #### Example: Load
 
@@ -343,7 +344,7 @@ Create an instance: `clan = client.Clan()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `character` | `list` |  |
+| `characters` | `list` |  |
 | `id` | `int` |  |
 | `name` | `str` |  |
 

@@ -48,7 +48,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "image",
+            ["name"] = "images",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 3,
@@ -69,7 +69,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "nature_type",
+            ["name"] = "natureType",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 6,
@@ -90,14 +90,14 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "unique_trait",
+            ["name"] = "uniqueTraits",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 9,
           },
           {
             ["active"] = true,
-            ["name"] = "voice_actor",
+            ["name"] = "voiceActors",
             ["req"] = false,
             ["type"] = "`$OBJECT`",
             ["index$"] = 10,
@@ -141,6 +141,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/character",
                 ["parts"] = {
@@ -155,7 +156,7 @@ local function make_config()
                 },
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.characters`",
                 },
                 ["index$"] = 0,
               },
@@ -181,6 +182,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/character/{id}",
                 ["parts"] = {
@@ -210,7 +212,7 @@ local function make_config()
         ["fields"] = {
           {
             ["active"] = true,
-            ["name"] = "character",
+            ["name"] = "characters",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 0,
@@ -260,6 +262,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/clan",
                 ["parts"] = {
@@ -273,7 +276,7 @@ local function make_config()
                 },
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.clans`",
                 },
                 ["index$"] = 0,
               },

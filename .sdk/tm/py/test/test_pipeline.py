@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import NarutoCharacterSDK
-from core.error import NarutoCharacterError
-from core.result import NarutoCharacterResult
-from core.response import NarutoCharacterResponse
-from core.spec import NarutoCharacterSpec
-from feature.base_feature import NarutoCharacterBaseFeature
+from projectname_sdk.core.error import NarutoCharacterError
+from projectname_sdk.core.result import NarutoCharacterResult
+from projectname_sdk.core.response import NarutoCharacterResponse
+from projectname_sdk.core.spec import NarutoCharacterSpec
+from projectname_sdk.feature.base_feature import NarutoCharacterBaseFeature
 
 
 def _client():

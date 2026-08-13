@@ -43,8 +43,8 @@ class NarutoCharacterTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('NARUTOCHARACTER_TEST_LIVE');
-        $override = self::getenv('NARUTOCHARACTER_TEST_OVERRIDE');
+        $live = self::getenv('NARUTO_CHARACTER_TEST_LIVE');
+        $override = self::getenv('NARUTO_CHARACTER_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class NarutoCharacterTestRunner
             }
         }
 
-        $explain = self::getenv('NARUTOCHARACTER_TEST_EXPLAIN');
+        $explain = self::getenv('NARUTO_CHARACTER_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['NARUTOCHARACTER_TEST_EXPLAIN'] = $explain;
+            $m['NARUTO_CHARACTER_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

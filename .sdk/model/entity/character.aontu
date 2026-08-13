@@ -21,7 +21,7 @@ main: kit: entity: character: {
       type: "`$INTEGER`"
     }
     {
-      name: "image"
+      name: "images"
       req: false
       type: "`$ARRAY`"
     }
@@ -36,7 +36,7 @@ main: kit: entity: character: {
       type: "`$STRING`"
     }
     {
-      name: "nature_type"
+      name: "natureType"
       req: false
       type: "`$ARRAY`"
     }
@@ -51,12 +51,12 @@ main: kit: entity: character: {
       type: "`$OBJECT`"
     }
     {
-      name: "unique_trait"
+      name: "uniqueTraits"
       req: false
       type: "`$ARRAY`"
     }
     {
-      name: "voice_actor"
+      name: "voiceActors"
       req: false
       type: "`$OBJECT`"
     }
@@ -114,7 +114,7 @@ main: kit: entity: character: {
           }
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.characters`"
           }
         }
       ]

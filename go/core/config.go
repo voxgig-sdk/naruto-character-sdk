@@ -48,7 +48,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"active": true,
-						"name": "image",
+						"name": "images",
 						"req": false,
 						"type": "`$ARRAY`",
 						"index$": 3,
@@ -69,7 +69,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"active": true,
-						"name": "nature_type",
+						"name": "natureType",
 						"req": false,
 						"type": "`$ARRAY`",
 						"index$": 6,
@@ -90,14 +90,14 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"active": true,
-						"name": "unique_trait",
+						"name": "uniqueTraits",
 						"req": false,
 						"type": "`$ARRAY`",
 						"index$": 9,
 					},
 					map[string]any{
 						"active": true,
-						"name": "voice_actor",
+						"name": "voiceActors",
 						"req": false,
 						"type": "`$OBJECT`",
 						"index$": 10,
@@ -141,6 +141,7 @@ func MakeConfig() map[string]any {
 										},
 									},
 								},
+								"kind": "http",
 								"method": "GET",
 								"orig": "/character",
 								"parts": []any{
@@ -155,12 +156,11 @@ func MakeConfig() map[string]any {
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
-									"res": "`body`",
+									"res": "`body.characters`",
 								},
 								"index$": 0,
 							},
 						},
-						"key$": "list",
 					},
 					"load": map[string]any{
 						"input": "data",
@@ -181,6 +181,7 @@ func MakeConfig() map[string]any {
 										},
 									},
 								},
+								"kind": "http",
 								"method": "GET",
 								"orig": "/character/{id}",
 								"parts": []any{
@@ -199,7 +200,6 @@ func MakeConfig() map[string]any {
 								"index$": 0,
 							},
 						},
-						"key$": "load",
 					},
 				},
 				"relations": map[string]any{
@@ -210,7 +210,7 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"active": true,
-						"name": "character",
+						"name": "characters",
 						"req": false,
 						"type": "`$ARRAY`",
 						"index$": 0,
@@ -260,6 +260,7 @@ func MakeConfig() map[string]any {
 										},
 									},
 								},
+								"kind": "http",
 								"method": "GET",
 								"orig": "/clan",
 								"parts": []any{
@@ -273,12 +274,11 @@ func MakeConfig() map[string]any {
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
-									"res": "`body`",
+									"res": "`body.clans`",
 								},
 								"index$": 0,
 							},
 						},
-						"key$": "list",
 					},
 				},
 				"relations": map[string]any{

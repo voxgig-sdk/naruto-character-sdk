@@ -49,7 +49,7 @@ try {
 
 ```php
 try {
-    // load() returns the bare Character record (throws on error).
+    // load() returns the ENTITY — call data_get() for the Character record (throws on error).
     $character = $client->Character()->load(["id" => 1]);
     print_r($character);
 } catch (\Throwable $err) {
@@ -140,7 +140,8 @@ $client = NarutoCharacterSDK::test([
     "entity" => ["character" => ["test01" => ["id" => "test01"]]],
 ]);
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $character = $client->Character()->list();
 print_r($character);
 ```
@@ -241,7 +242,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -266,14 +267,14 @@ On error, `ok` is `false` and `$err` contains the error value.
 | `debut` |  |
 | `family` |  |
 | `id` |  |
-| `image` |  |
+| `images` |  |
 | `jutsu` |  |
 | `name` |  |
-| `nature_type` |  |
+| `natureType` |  |
 | `personal` |  |
 | `rank` |  |
-| `unique_trait` |  |
-| `voice_actor` |  |
+| `uniqueTraits` |  |
+| `voiceActors` |  |
 
 Operations: List, Load.
 
@@ -283,7 +284,7 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `character` |  |
+| `characters` |  |
 | `id` |  |
 | `name` |  |
 
@@ -314,19 +315,19 @@ Create an instance: `$character = $client->Character();`
 | `debut` | `array` |  |
 | `family` | `array` |  |
 | `id` | `int` |  |
-| `image` | `array` |  |
+| `images` | `array` |  |
 | `jutsu` | `array` |  |
 | `name` | `string` |  |
-| `nature_type` | `array` |  |
+| `natureType` | `array` |  |
 | `personal` | `array` |  |
 | `rank` | `array` |  |
-| `unique_trait` | `array` |  |
-| `voice_actor` | `array` |  |
+| `uniqueTraits` | `array` |  |
+| `voiceActors` | `array` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Character record (throws on error).
+// load() returns the ENTITY — call data_get() for the Character record (throws on error).
 $character = $client->Character()->load(["id" => 1]);
 ```
 
@@ -352,7 +353,7 @@ Create an instance: `$clan = $client->Clan();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `character` | `array` |  |
+| `characters` | `array` |  |
 | `id` | `int` |  |
 | `name` | `string` |  |
 

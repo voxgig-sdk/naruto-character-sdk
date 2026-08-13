@@ -10,14 +10,14 @@
 ---@field debut? table
 ---@field family? table
 ---@field id? number
----@field image? table
+---@field images? table
 ---@field jutsu? table
 ---@field name? string
----@field nature_type? table
+---@field natureType? table
 ---@field personal? table
 ---@field rank? table
----@field unique_trait? table
----@field voice_actor? table
+---@field uniqueTraits? table
+---@field voiceActors? table
 
 ---@class CharacterLoadMatch
 ---@field id number
@@ -26,22 +26,22 @@
 ---@field debut? table
 ---@field family? table
 ---@field id? number
----@field image? table
+---@field images? table
 ---@field jutsu? table
 ---@field name? string
----@field nature_type? table
+---@field natureType? table
 ---@field personal? table
 ---@field rank? table
----@field unique_trait? table
----@field voice_actor? table
+---@field uniqueTraits? table
+---@field voiceActors? table
 
 ---@class Clan
----@field character? table
+---@field characters? table
 ---@field id? number
 ---@field name? string
 
 ---@class ClanListMatch
----@field character? table
+---@field characters? table
 ---@field id? number
 ---@field name? string
 

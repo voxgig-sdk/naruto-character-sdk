@@ -94,14 +94,14 @@ character = client.Character()
 | `debut` | `dict` | No |  |
 | `family` | `dict` | No |  |
 | `id` | `int` | No |  |
-| `image` | `list` | No |  |
+| `images` | `list` | No |  |
 | `jutsu` | `list` | No |  |
 | `name` | `str` | No |  |
-| `nature_type` | `list` | No |  |
+| `natureType` | `list` | No |  |
 | `personal` | `dict` | No |  |
 | `rank` | `dict` | No |  |
-| `unique_trait` | `list` | No |  |
-| `voice_actor` | `dict` | No |  |
+| `uniqueTraits` | `list` | No |  |
+| `voiceActors` | `dict` | No |  |
 
 ### Operations
 
@@ -162,7 +162,7 @@ clan = client.Clan()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | `list` | No |  |
+| `characters` | `list` | No |  |
 | `id` | `int` | No |  |
 | `name` | `str` | No |  |
 

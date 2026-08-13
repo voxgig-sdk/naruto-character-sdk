@@ -99,14 +99,14 @@ $character = $client->Character();
 | `debut` | `array` | No |  |
 | `family` | `array` | No |  |
 | `id` | `int` | No |  |
-| `image` | `array` | No |  |
+| `images` | `array` | No |  |
 | `jutsu` | `array` | No |  |
 | `name` | `string` | No |  |
-| `nature_type` | `array` | No |  |
+| `natureType` | `array` | No |  |
 | `personal` | `array` | No |  |
 | `rank` | `array` | No |  |
-| `unique_trait` | `array` | No |  |
-| `voice_actor` | `array` | No |  |
+| `uniqueTraits` | `array` | No |  |
+| `voiceActors` | `array` | No |  |
 
 ### Operations
 
@@ -166,7 +166,7 @@ $clan = $client->Clan();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | `array` | No |  |
+| `characters` | `array` | No |  |
 | `id` | `int` | No |  |
 | `name` | `string` | No |  |
 

@@ -114,11 +114,11 @@ def character_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "NARUTOCHARACTER_TEST_CHARACTER_ENTID" => {},
-    "NARUTOCHARACTER_TEST_LIVE" => "FALSE",
+    "NARUTO_CHARACTER_TEST_CHARACTER_ENTID" => {},
+    "NARUTO_CHARACTER_TEST_LIVE" => "FALSE",
   })
 
-  live = env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE"
+  live = env["NARUTO_CHARACTER_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

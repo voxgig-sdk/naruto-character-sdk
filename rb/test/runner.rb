@@ -23,8 +23,8 @@ module NarutoCharacterTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("NARUTOCHARACTER_TEST_LIVE")
-    override = getenv("NARUTOCHARACTER_TEST_OVERRIDE")
+    live = getenv("NARUTO_CHARACTER_TEST_LIVE")
+    override = getenv("NARUTO_CHARACTER_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module NarutoCharacterTestRunner
       end
     end
 
-    explain = getenv("NARUTOCHARACTER_TEST_EXPLAIN")
-    m["NARUTOCHARACTER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("NARUTO_CHARACTER_TEST_EXPLAIN")
+    m["NARUTO_CHARACTER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

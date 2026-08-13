@@ -54,7 +54,7 @@ class NarutoCharacterConfig
             ],
             [
               'active' => true,
-              'name' => 'image',
+              'name' => 'images',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 3,
@@ -75,7 +75,7 @@ class NarutoCharacterConfig
             ],
             [
               'active' => true,
-              'name' => 'nature_type',
+              'name' => 'natureType',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 6,
@@ -96,14 +96,14 @@ class NarutoCharacterConfig
             ],
             [
               'active' => true,
-              'name' => 'unique_trait',
+              'name' => 'uniqueTraits',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 9,
             ],
             [
               'active' => true,
-              'name' => 'voice_actor',
+              'name' => 'voiceActors',
               'req' => false,
               'type' => '`$OBJECT`',
               'index$' => 10,
@@ -147,6 +147,7 @@ class NarutoCharacterConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/character',
                   'parts' => [
@@ -161,7 +162,7 @@ class NarutoCharacterConfig
                   ],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.characters`',
                   ],
                   'index$' => 0,
                 ],
@@ -187,6 +188,7 @@ class NarutoCharacterConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/character/{id}',
                   'parts' => [
@@ -216,7 +218,7 @@ class NarutoCharacterConfig
           'fields' => [
             [
               'active' => true,
-              'name' => 'character',
+              'name' => 'characters',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 0,
@@ -266,6 +268,7 @@ class NarutoCharacterConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/clan',
                   'parts' => [
@@ -279,7 +282,7 @@ class NarutoCharacterConfig
                   ],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.clans`',
                   ],
                   'index$' => 0,
                 ],

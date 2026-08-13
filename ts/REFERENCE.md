@@ -131,14 +131,14 @@ const character = client.Character()
 | `debut` | `Record<string, any>` | No |  |
 | `family` | `Record<string, any>` | No |  |
 | `id` | `number` | No |  |
-| `image` | `any[]` | No |  |
+| `images` | `any[]` | No |  |
 | `jutsu` | `any[]` | No |  |
 | `name` | `string` | No |  |
-| `nature_type` | `any[]` | No |  |
+| `natureType` | `any[]` | No |  |
 | `personal` | `Record<string, any>` | No |  |
 | `rank` | `Record<string, any>` | No |  |
-| `unique_trait` | `any[]` | No |  |
-| `voice_actor` | `Record<string, any>` | No |  |
+| `uniqueTraits` | `any[]` | No |  |
+| `voiceActors` | `Record<string, any>` | No |  |
 
 ### Operations
 
@@ -196,7 +196,7 @@ const clan = client.Clan()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `character` | `any[]` | No |  |
+| `characters` | `any[]` | No |  |
 | `id` | `number` | No |  |
 | `name` | `string` | No |  |
 

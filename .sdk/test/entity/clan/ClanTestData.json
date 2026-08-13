@@ -2,17 +2,17 @@
   "existing": {
     "clan": {
       "CLAN00": {
-        "character": [],
+        "characters": [],
         "id": "CLAN00",
         "name": "s20"
       },
       "CLAN01": {
-        "character": [],
+        "characters": [],
         "id": "CLAN01",
         "name": "s3e"
       },
       "CLAN02": {
-        "character": [],
+        "characters": [],
         "id": "CLAN02",
         "name": "s5c"
       }
@@ -21,7 +21,7 @@
   "new": {
     "clan": {
       "clan_ref01": {
-        "character": [],
+        "characters": [],
         "name": "s7a"
       }
     }

@@ -8,6 +8,7 @@ guide: {
   entity: character: {
     path: "/character": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.characters`")|top
     }
     path: "/character/{id}": {
       op: load: method: *GET
@@ -17,6 +18,7 @@ guide: {
   entity: clan: {
     path: "/clan": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.clans`")|top
     }
   }
 

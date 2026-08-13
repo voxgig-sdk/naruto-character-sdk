@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# NarutoCharacter SDK exists test
 
 import pytest
 from narutocharacter_sdk import NarutoCharacterSDK

@@ -66,11 +66,11 @@ function clan_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "NARUTOCHARACTER_TEST_CLAN_ENTID" => [],
-        "NARUTOCHARACTER_TEST_LIVE" => "FALSE",
+        "NARUTO_CHARACTER_TEST_CLAN_ENTID" => [],
+        "NARUTO_CHARACTER_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["NARUTOCHARACTER_TEST_LIVE"] === "TRUE";
+    $live = $env["NARUTO_CHARACTER_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

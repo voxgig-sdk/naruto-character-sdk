@@ -35,7 +35,9 @@ const client = new NarutoCharacterSDK()
 
 ### 2. List character records
 
-`list()` resolves to an array of Character objects — iterate it directly:
+`list()` resolves to an array of Character ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const characters = await client.Character().list()
@@ -133,7 +135,8 @@ Create a mock client for unit testing — no server required:
 const client = NarutoCharacterSDK.test()
 
 const character = await client.Character().list()
-// character is a bare entity populated with mock response data
+// character is the entity, populated with mock response data
+// — call character.data() for the record itself
 console.log(character)
 ```
 
@@ -303,14 +306,14 @@ The `prepare()` method returns:
 | `debut` |  |
 | `family` |  |
 | `id` |  |
-| `image` |  |
+| `images` |  |
 | `jutsu` |  |
 | `name` |  |
-| `nature_type` |  |
+| `natureType` |  |
 | `personal` |  |
 | `rank` |  |
-| `unique_trait` |  |
-| `voice_actor` |  |
+| `uniqueTraits` |  |
+| `voiceActors` |  |
 
 Operations: list, load.
 
@@ -320,7 +323,7 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `character` |  |
+| `characters` |  |
 | `id` |  |
 | `name` |  |
 
@@ -351,14 +354,14 @@ Create an instance: `const character = client.Character()`
 | `debut` | `Record<string, any>` |  |
 | `family` | `Record<string, any>` |  |
 | `id` | `number` |  |
-| `image` | `any[]` |  |
+| `images` | `any[]` |  |
 | `jutsu` | `any[]` |  |
 | `name` | `string` |  |
-| `nature_type` | `any[]` |  |
+| `natureType` | `any[]` |  |
 | `personal` | `Record<string, any>` |  |
 | `rank` | `Record<string, any>` |  |
-| `unique_trait` | `any[]` |  |
-| `voice_actor` | `Record<string, any>` |  |
+| `uniqueTraits` | `any[]` |  |
+| `voiceActors` | `Record<string, any>` |  |
 
 #### Example: Load
 
@@ -387,7 +390,7 @@ Create an instance: `const clan = client.Clan()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `character` | `any[]` |  |
+| `characters` | `any[]` |  |
 | `id` | `number` |  |
 | `name` | `string` |  |
 

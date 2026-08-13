@@ -245,14 +245,14 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | `debut` |  |
 | `family` |  |
 | `id` |  |
-| `image` |  |
+| `images` |  |
 | `jutsu` |  |
 | `name` |  |
-| `nature_type` |  |
+| `natureType` |  |
 | `personal` |  |
 | `rank` |  |
-| `unique_trait` |  |
-| `voice_actor` |  |
+| `uniqueTraits` |  |
+| `voiceActors` |  |
 
 Operations: List, Load.
 
@@ -262,7 +262,7 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `character` |  |
+| `characters` |  |
 | `id` |  |
 | `name` |  |
 
@@ -293,14 +293,14 @@ Create an instance: `local character = client:Character(nil)`
 | `debut` | `table` |  |
 | `family` | `table` |  |
 | `id` | `number` |  |
-| `image` | `table` |  |
+| `images` | `table` |  |
 | `jutsu` | `table` |  |
 | `name` | `string` |  |
-| `nature_type` | `table` |  |
+| `natureType` | `table` |  |
 | `personal` | `table` |  |
 | `rank` | `table` |  |
-| `unique_trait` | `table` |  |
-| `voice_actor` | `table` |  |
+| `uniqueTraits` | `table` |  |
+| `voiceActors` | `table` |  |
 
 #### Example: Load
 
@@ -329,7 +329,7 @@ Create an instance: `local clan = client:Clan(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `character` | `table` |  |
+| `characters` | `table` |  |
 | `id` | `number` |  |
 | `name` | `string` |  |
 

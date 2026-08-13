@@ -5,40 +5,40 @@
         "debut": {},
         "family": {},
         "id": "CHARACTER00",
-        "image": [],
+        "images": [],
         "jutsu": [],
         "name": "s73",
-        "nature_type": [],
+        "natureType": [],
         "personal": {},
         "rank": {},
-        "unique_trait": [],
-        "voice_actor": {}
+        "uniqueTraits": [],
+        "voiceActors": {}
       },
       "CHARACTER01": {
         "debut": {},
         "family": {},
         "id": "CHARACTER01",
-        "image": [],
+        "images": [],
         "jutsu": [],
         "name": "se1",
-        "nature_type": [],
+        "natureType": [],
         "personal": {},
         "rank": {},
-        "unique_trait": [],
-        "voice_actor": {}
+        "uniqueTraits": [],
+        "voiceActors": {}
       },
       "CHARACTER02": {
         "debut": {},
         "family": {},
         "id": "CHARACTER02",
-        "image": [],
+        "images": [],
         "jutsu": [],
         "name": "s14f",
-        "nature_type": [],
+        "natureType": [],
         "personal": {},
         "rank": {},
-        "unique_trait": [],
-        "voice_actor": {}
+        "uniqueTraits": [],
+        "voiceActors": {}
       }
     }
   },
@@ -47,14 +47,14 @@
       "character_ref01": {
         "debut": {},
         "family": {},
-        "image": [],
+        "images": [],
         "jutsu": [],
         "name": "s1bd",
-        "nature_type": [],
+        "natureType": [],
         "personal": {},
         "rank": {},
-        "unique_trait": [],
-        "voice_actor": {}
+        "uniqueTraits": [],
+        "voiceActors": {}
       }
     }
   }

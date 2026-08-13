@@ -61,11 +61,11 @@ function clan_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["NARUTOCHARACTER_TEST_CLAN_ENTID"] = {},
-    ["NARUTOCHARACTER_TEST_LIVE"] = "FALSE",
+    ["NARUTO_CHARACTER_TEST_CLAN_ENTID"] = {},
+    ["NARUTO_CHARACTER_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["NARUTOCHARACTER_TEST_LIVE"] == "TRUE"
+  local live = env["NARUTO_CHARACTER_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

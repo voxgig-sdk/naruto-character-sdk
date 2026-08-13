@@ -48,7 +48,7 @@ end
 
 ```ruby
 begin
-  # load returns the bare Character record (raises on error).
+  # load returns the ENTITY — call data_get for the Character record (raises on error).
   character = client.Character.load({ "id" => 1 })
   puts character
 rescue => err
@@ -134,7 +134,8 @@ client = NarutoCharacterSDK.test({
   "entity" => { "character" => { "test01" => { "id" => "test01" } } },
 })
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 character = client.Character.list()
 puts character
 ```
@@ -256,14 +257,14 @@ returns a result `Hash` with these keys:
 | `debut` |  |
 | `family` |  |
 | `id` |  |
-| `image` |  |
+| `images` |  |
 | `jutsu` |  |
 | `name` |  |
-| `nature_type` |  |
+| `natureType` |  |
 | `personal` |  |
 | `rank` |  |
-| `unique_trait` |  |
-| `voice_actor` |  |
+| `uniqueTraits` |  |
+| `voiceActors` |  |
 
 Operations: List, Load.
 
@@ -273,7 +274,7 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `character` |  |
+| `characters` |  |
 | `id` |  |
 | `name` |  |
 
@@ -304,19 +305,19 @@ Create an instance: `character = client.Character`
 | `debut` | `Hash` |  |
 | `family` | `Hash` |  |
 | `id` | `Integer` |  |
-| `image` | `Array` |  |
+| `images` | `Array` |  |
 | `jutsu` | `Array` |  |
 | `name` | `String` |  |
-| `nature_type` | `Array` |  |
+| `natureType` | `Array` |  |
 | `personal` | `Hash` |  |
 | `rank` | `Hash` |  |
-| `unique_trait` | `Array` |  |
-| `voice_actor` | `Hash` |  |
+| `uniqueTraits` | `Array` |  |
+| `voiceActors` | `Hash` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Character record (raises on error).
+# load returns the ENTITY — call data_get for the Character record (raises on error).
 character = client.Character.load({ "id" => 1 })
 ```
 
@@ -342,7 +343,7 @@ Create an instance: `clan = client.Clan`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `character` | `Array` |  |
+| `characters` | `Array` |  |
 | `id` | `Integer` |  |
 | `name` | `String` |  |
 

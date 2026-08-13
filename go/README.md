@@ -273,14 +273,14 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"debut"` |  |
 | `"family"` |  |
 | `"id"` |  |
-| `"image"` |  |
+| `"images"` |  |
 | `"jutsu"` |  |
 | `"name"` |  |
-| `"nature_type"` |  |
+| `"natureType"` |  |
 | `"personal"` |  |
 | `"rank"` |  |
-| `"unique_trait"` |  |
-| `"voice_actor"` |  |
+| `"uniqueTraits"` |  |
+| `"voiceActors"` |  |
 
 Operations: List, Load.
 
@@ -290,7 +290,7 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `"character"` |  |
+| `"characters"` |  |
 | `"id"` |  |
 | `"name"` |  |
 
@@ -321,14 +321,14 @@ Create an instance: `character := client.Character(nil)`
 | `debut` | `map[string]any` |  |
 | `family` | `map[string]any` |  |
 | `id` | `int` |  |
-| `image` | `[]any` |  |
+| `images` | `[]any` |  |
 | `jutsu` | `[]any` |  |
 | `name` | `string` |  |
-| `nature_type` | `[]any` |  |
+| `natureType` | `[]any` |  |
 | `personal` | `map[string]any` |  |
 | `rank` | `map[string]any` |  |
-| `unique_trait` | `[]any` |  |
-| `voice_actor` | `map[string]any` |  |
+| `uniqueTraits` | `[]any` |  |
+| `voiceActors` | `map[string]any` |  |
 
 #### Example: Load
 
@@ -365,7 +365,7 @@ Create an instance: `clan := client.Clan(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `character` | `[]any` |  |
+| `characters` | `[]any` |  |
 | `id` | `int` |  |
 | `name` | `string` |  |
 

@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import NarutoCharacterControl
-from core.error import NarutoCharacterError
-from core.result import NarutoCharacterResult
-from core.spec import NarutoCharacterSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import NarutoCharacterControl
+from projectname_sdk.core.error import NarutoCharacterError
+from projectname_sdk.core.result import NarutoCharacterResult
+from projectname_sdk.core.spec import NarutoCharacterSpec
 
 
 # True when this SDK was generated with the named feature.

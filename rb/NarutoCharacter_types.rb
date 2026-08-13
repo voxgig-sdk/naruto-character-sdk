@@ -19,7 +19,7 @@
 # @!attribute [rw] id
 #   @return [Integer, nil]
 #
-# @!attribute [rw] image
+# @!attribute [rw] images
 #   @return [Array, nil]
 #
 # @!attribute [rw] jutsu
@@ -28,7 +28,7 @@
 # @!attribute [rw] name
 #   @return [String, nil]
 #
-# @!attribute [rw] nature_type
+# @!attribute [rw] natureType
 #   @return [Array, nil]
 #
 # @!attribute [rw] personal
@@ -37,23 +37,23 @@
 # @!attribute [rw] rank
 #   @return [Hash, nil]
 #
-# @!attribute [rw] unique_trait
+# @!attribute [rw] uniqueTraits
 #   @return [Array, nil]
 #
-# @!attribute [rw] voice_actor
+# @!attribute [rw] voiceActors
 #   @return [Hash, nil]
 Character = Struct.new(
   :debut,
   :family,
   :id,
-  :image,
+  :images,
   :jutsu,
   :name,
-  :nature_type,
+  :natureType,
   :personal,
   :rank,
-  :unique_trait,
-  :voice_actor,
+  :uniqueTraits,
+  :voiceActors,
   keyword_init: true
 )
 
@@ -77,7 +77,7 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] id
 #   @return [Integer, nil]
 #
-# @!attribute [rw] image
+# @!attribute [rw] images
 #   @return [Array, nil]
 #
 # @!attribute [rw] jutsu
@@ -86,7 +86,7 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] name
 #   @return [String, nil]
 #
-# @!attribute [rw] nature_type
+# @!attribute [rw] natureType
 #   @return [Array, nil]
 #
 # @!attribute [rw] personal
@@ -95,29 +95,29 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] rank
 #   @return [Hash, nil]
 #
-# @!attribute [rw] unique_trait
+# @!attribute [rw] uniqueTraits
 #   @return [Array, nil]
 #
-# @!attribute [rw] voice_actor
+# @!attribute [rw] voiceActors
 #   @return [Hash, nil]
 CharacterListMatch = Struct.new(
   :debut,
   :family,
   :id,
-  :image,
+  :images,
   :jutsu,
   :name,
-  :nature_type,
+  :natureType,
   :personal,
   :rank,
-  :unique_trait,
-  :voice_actor,
+  :uniqueTraits,
+  :voiceActors,
   keyword_init: true
 )
 
 # Clan entity data model.
 #
-# @!attribute [rw] character
+# @!attribute [rw] characters
 #   @return [Array, nil]
 #
 # @!attribute [rw] id
@@ -126,7 +126,7 @@ CharacterListMatch = Struct.new(
 # @!attribute [rw] name
 #   @return [String, nil]
 Clan = Struct.new(
-  :character,
+  :characters,
   :id,
   :name,
   keyword_init: true
@@ -134,7 +134,7 @@ Clan = Struct.new(
 
 # Request payload for Clan#list.
 #
-# @!attribute [rw] character
+# @!attribute [rw] characters
 #   @return [Array, nil]
 #
 # @!attribute [rw] id
@@ -143,7 +143,7 @@ Clan = Struct.new(
 # @!attribute [rw] name
 #   @return [String, nil]
 ClanListMatch = Struct.new(
-  :character,
+  :characters,
   :id,
   :name,
   keyword_init: true

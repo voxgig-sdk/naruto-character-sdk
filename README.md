@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = NarutoCharacterSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = NarutoCharacterSDK.test({
+  entity: {
+    character: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const characters = await client.Character().list()
-// characters is an array of bare Character records populated with mock data
+// characters is an array of Character entities, populated with mock data
+// — call characters[0].data() for the record itself
 console.log(characters)
 ```
 
@@ -110,7 +119,7 @@ import { NarutoCharacterSDK } from '@voxgig-sdk/naruto-character'
 
 const client = new NarutoCharacterSDK()
 
-// List all characters (returns Character[])
+// List all characters (returns CharacterEntity[] — .data() for the record)
 const characters = await client.Character().list()
 for (const character of characters) {
   console.log(character)
@@ -192,7 +201,7 @@ $client = new NarutoCharacterSDK();
 $characters = $client->Character()->list();
 print_r($characters);
 
-// Load a specific character (returns the bare record; throws on error)
+// Load a specific character (returns the ENTITY; call data_get() for the record; throws on error)
 $character = $client->Character()->load(["id" => 1]);
 print_r($character);
 ```
@@ -223,7 +232,7 @@ client = NarutoCharacterSDK.new
 characters = client.Character.list
 puts characters
 
-# Load a specific character (returns the bare record; raises on error)
+# Load a specific character (returns the ENTITY; call data_get for the record)
 character = client.Character.load({ "id" => 1 })
 puts character
 ```
@@ -360,6 +369,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://narutodb.xyz/](https://narutodb.xyz/)
 
