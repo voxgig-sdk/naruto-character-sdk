@@ -28,7 +28,7 @@ class NarutoCharacterSDK
     utility = NarutoCharacterUtility.new
     @_utility = utility
 
-    config = NarutoCharacterConfig.make_config
+    config = NarutoCharacterConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

@@ -40,7 +40,7 @@ class NarutoCharacterSDK
         $utility = new NarutoCharacterUtility();
         $this->_utility = $utility;
 
-        $config = NarutoCharacterConfig::make_config();
+        $config = NarutoCharacterConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

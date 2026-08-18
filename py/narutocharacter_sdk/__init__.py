@@ -23,8 +23,8 @@ class NarutoCharacterSDK:
         utility = NarutoCharacterUtility()
         self._utility = utility
 
-        from narutocharacter_sdk.config import make_config
-        config = make_config()
+        from narutocharacter_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,

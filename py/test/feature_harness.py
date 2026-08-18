@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from narutocharacter_sdk.config import make_config
+from narutocharacter_sdk.config import shared_config
 from narutocharacter_sdk.features import _make_feature
 from narutocharacter_sdk.core.control import NarutoCharacterControl
 from narutocharacter_sdk.core.error import NarutoCharacterError
@@ -24,7 +24,7 @@ from narutocharacter_sdk.core.spec import NarutoCharacterSpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 
