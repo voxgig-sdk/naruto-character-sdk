@@ -103,15 +103,15 @@ fmt.Println(character.GetName()) // "character"
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `debut` | `map[string]any` | No |  |
-| `family` | `map[string]any` | No |  |
-| `id` | `int` | No |  |
-| `images` | `[]any` | No |  |
-| `jutsu` | `[]any` | No |  |
-| `name` | `string` | No |  |
-| `natureType` | `[]any` | No |  |
+| `family` | `map[string]any` | No | Character's family members and relationships |
+| `id` | `int` | No | Unique identifier for the character |
+| `images` | `[]any` | No | URLs to character images |
+| `jutsu` | `[]any` | No | List of jutsus the character can perform |
+| `name` | `string` | No | Character's name |
+| `natureType` | `[]any` | No | Character's chakra nature types |
 | `personal` | `map[string]any` | No |  |
 | `rank` | `map[string]any` | No |  |
-| `uniqueTraits` | `[]any` | No |  |
+| `uniqueTraits` | `[]any` | No | Character's unique traits or abilities |
 | `voiceActors` | `map[string]any` | No |  |
 
 ### Operations
@@ -175,9 +175,9 @@ fmt.Println(clan.GetName()) // "clan"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `characters` | `[]any` | No |  |
-| `id` | `int` | No |  |
-| `name` | `string` | No |  |
+| `characters` | `[]any` | No | List of characters belonging to this clan |
+| `id` | `int` | No | Unique identifier for the clan |
+| `name` | `string` | No | Clan name |
 
 ### Operations
 

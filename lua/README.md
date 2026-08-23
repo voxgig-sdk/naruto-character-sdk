@@ -243,15 +243,15 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | Field | Description |
 | --- | --- |
 | `debut` |  |
-| `family` |  |
-| `id` |  |
-| `images` |  |
-| `jutsu` |  |
-| `name` |  |
-| `natureType` |  |
+| `family` | Character's family members and relationships |
+| `id` | Unique identifier for the character |
+| `images` | URLs to character images |
+| `jutsu` | List of jutsus the character can perform |
+| `name` | Character's name |
+| `natureType` | Character's chakra nature types |
 | `personal` |  |
 | `rank` |  |
-| `uniqueTraits` |  |
+| `uniqueTraits` | Character's unique traits or abilities |
 | `voiceActors` |  |
 
 Operations: List, Load.
@@ -262,9 +262,9 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `characters` |  |
-| `id` |  |
-| `name` |  |
+| `characters` | List of characters belonging to this clan |
+| `id` | Unique identifier for the clan |
+| `name` | Clan name |
 
 Operations: List.
 
@@ -291,15 +291,15 @@ Create an instance: `local character = client:Character(nil)`
 | Field | Type | Description |
 | --- | --- | --- |
 | `debut` | `table` |  |
-| `family` | `table` |  |
-| `id` | `number` |  |
-| `images` | `table` |  |
-| `jutsu` | `table` |  |
-| `name` | `string` |  |
-| `natureType` | `table` |  |
+| `family` | `table` | Character's family members and relationships |
+| `id` | `number` | Unique identifier for the character |
+| `images` | `table` | URLs to character images |
+| `jutsu` | `table` | List of jutsus the character can perform |
+| `name` | `string` | Character's name |
+| `natureType` | `table` | Character's chakra nature types |
 | `personal` | `table` |  |
 | `rank` | `table` |  |
-| `uniqueTraits` | `table` |  |
+| `uniqueTraits` | `table` | Character's unique traits or abilities |
 | `voiceActors` | `table` |  |
 
 #### Example: Load
@@ -329,9 +329,9 @@ Create an instance: `local clan = client:Clan(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `characters` | `table` |  |
-| `id` | `number` |  |
-| `name` | `string` |  |
+| `characters` | `table` | List of characters belonging to this clan |
+| `id` | `number` | Unique identifier for the clan |
+| `name` | `string` | Clan name |
 
 #### Example: List
 

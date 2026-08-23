@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -304,15 +304,15 @@ The `prepare()` method returns:
 | Field | Description |
 | --- | --- |
 | `debut` |  |
-| `family` |  |
-| `id` |  |
-| `images` |  |
-| `jutsu` |  |
-| `name` |  |
-| `natureType` |  |
+| `family` | Character's family members and relationships |
+| `id` | Unique identifier for the character |
+| `images` | URLs to character images |
+| `jutsu` | List of jutsus the character can perform |
+| `name` | Character's name |
+| `natureType` | Character's chakra nature types |
 | `personal` |  |
 | `rank` |  |
-| `uniqueTraits` |  |
+| `uniqueTraits` | Character's unique traits or abilities |
 | `voiceActors` |  |
 
 Operations: list, load.
@@ -323,9 +323,9 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `characters` |  |
-| `id` |  |
-| `name` |  |
+| `characters` | List of characters belonging to this clan |
+| `id` | Unique identifier for the clan |
+| `name` | Clan name |
 
 Operations: list.
 
@@ -352,15 +352,15 @@ Create an instance: `const character = client.Character()`
 | Field | Type | Description |
 | --- | --- | --- |
 | `debut` | `Record<string, any>` |  |
-| `family` | `Record<string, any>` |  |
-| `id` | `number` |  |
-| `images` | `any[]` |  |
-| `jutsu` | `any[]` |  |
-| `name` | `string` |  |
-| `natureType` | `any[]` |  |
+| `family` | `Record<string, any>` | Character's family members and relationships |
+| `id` | `number` | Unique identifier for the character |
+| `images` | `any[]` | URLs to character images |
+| `jutsu` | `any[]` | List of jutsus the character can perform |
+| `name` | `string` | Character's name |
+| `natureType` | `any[]` | Character's chakra nature types |
 | `personal` | `Record<string, any>` |  |
 | `rank` | `Record<string, any>` |  |
-| `uniqueTraits` | `any[]` |  |
+| `uniqueTraits` | `any[]` | Character's unique traits or abilities |
 | `voiceActors` | `Record<string, any>` |  |
 
 #### Example: Load
@@ -390,9 +390,9 @@ Create an instance: `const clan = client.Clan()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `characters` | `any[]` |  |
-| `id` | `number` |  |
-| `name` | `string` |  |
+| `characters` | `any[]` | List of characters belonging to this clan |
+| `id` | `number` | Unique identifier for the clan |
+| `name` | `string` | Clan name |
 
 #### Example: List
 

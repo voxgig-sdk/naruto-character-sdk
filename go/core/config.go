@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "NarutoCharacter",
+			"slug": "naruto-character",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -38,26 +41,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "family",
+						"short": "Character's family members and relationships",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the character",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "images",
+						"short": "URLs to character images",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "jutsu",
+						"short": "List of jutsus the character can perform",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Character's name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "natureType",
+						"short": "Character's chakra nature types",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -70,6 +79,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "uniqueTraits",
+						"short": "Character's unique traits or abilities",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -172,14 +182,17 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "characters",
+						"short": "List of characters belonging to this clan",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the clan",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Clan name",
 						"type": "`$STRING`",
 					},
 				},

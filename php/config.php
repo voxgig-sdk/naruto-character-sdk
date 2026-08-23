@@ -33,6 +33,9 @@ class NarutoCharacterConfig
         return [
             "main" => [
                 "name" => "NarutoCharacter",
+                "slug" => "naruto-character",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -60,26 +63,32 @@ class NarutoCharacterConfig
             ],
             [
               'name' => 'family',
+              'short' => 'Character\'s family members and relationships',
               'type' => '`$OBJECT`',
             ],
             [
               'name' => 'id',
+              'short' => 'Unique identifier for the character',
               'type' => '`$INTEGER`',
             ],
             [
               'name' => 'images',
+              'short' => 'URLs to character images',
               'type' => '`$ARRAY`',
             ],
             [
               'name' => 'jutsu',
+              'short' => 'List of jutsus the character can perform',
               'type' => '`$ARRAY`',
             ],
             [
               'name' => 'name',
+              'short' => 'Character\'s name',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'natureType',
+              'short' => 'Character\'s chakra nature types',
               'type' => '`$ARRAY`',
             ],
             [
@@ -92,6 +101,7 @@ class NarutoCharacterConfig
             ],
             [
               'name' => 'uniqueTraits',
+              'short' => 'Character\'s unique traits or abilities',
               'type' => '`$ARRAY`',
             ],
             [
@@ -194,14 +204,17 @@ class NarutoCharacterConfig
           'fields' => [
             [
               'name' => 'characters',
+              'short' => 'List of characters belonging to this clan',
               'type' => '`$ARRAY`',
             ],
             [
               'name' => 'id',
+              'short' => 'Unique identifier for the clan',
               'type' => '`$INTEGER`',
             ],
             [
               'name' => 'name',
+              'short' => 'Clan name',
               'type' => '`$STRING`',
             ],
           ],

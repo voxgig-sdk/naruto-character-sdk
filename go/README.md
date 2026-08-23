@@ -6,7 +6,7 @@ The Golang SDK for the NarutoCharacter API — an entity-oriented client using s
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Character(nil)` — each with the same small set of operations (`List`, `Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -271,15 +271,15 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | Field | Description |
 | --- | --- |
 | `"debut"` |  |
-| `"family"` |  |
-| `"id"` |  |
-| `"images"` |  |
-| `"jutsu"` |  |
-| `"name"` |  |
-| `"natureType"` |  |
+| `"family"` | Character's family members and relationships |
+| `"id"` | Unique identifier for the character |
+| `"images"` | URLs to character images |
+| `"jutsu"` | List of jutsus the character can perform |
+| `"name"` | Character's name |
+| `"natureType"` | Character's chakra nature types |
 | `"personal"` |  |
 | `"rank"` |  |
-| `"uniqueTraits"` |  |
+| `"uniqueTraits"` | Character's unique traits or abilities |
 | `"voiceActors"` |  |
 
 Operations: List, Load.
@@ -290,9 +290,9 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `"characters"` |  |
-| `"id"` |  |
-| `"name"` |  |
+| `"characters"` | List of characters belonging to this clan |
+| `"id"` | Unique identifier for the clan |
+| `"name"` | Clan name |
 
 Operations: List.
 
@@ -319,15 +319,15 @@ Create an instance: `character := client.Character(nil)`
 | Field | Type | Description |
 | --- | --- | --- |
 | `debut` | `map[string]any` |  |
-| `family` | `map[string]any` |  |
-| `id` | `int` |  |
-| `images` | `[]any` |  |
-| `jutsu` | `[]any` |  |
-| `name` | `string` |  |
-| `natureType` | `[]any` |  |
+| `family` | `map[string]any` | Character's family members and relationships |
+| `id` | `int` | Unique identifier for the character |
+| `images` | `[]any` | URLs to character images |
+| `jutsu` | `[]any` | List of jutsus the character can perform |
+| `name` | `string` | Character's name |
+| `natureType` | `[]any` | Character's chakra nature types |
 | `personal` | `map[string]any` |  |
 | `rank` | `map[string]any` |  |
-| `uniqueTraits` | `[]any` |  |
+| `uniqueTraits` | `[]any` | Character's unique traits or abilities |
 | `voiceActors` | `map[string]any` |  |
 
 #### Example: Load
@@ -365,9 +365,9 @@ Create an instance: `clan := client.Clan(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `characters` | `[]any` |  |
-| `id` | `int` |  |
-| `name` | `string` |  |
+| `characters` | `[]any` | List of characters belonging to this clan |
+| `id` | `int` | Unique identifier for the clan |
+| `name` | `string` | Clan name |
 
 #### Example: List
 

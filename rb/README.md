@@ -255,15 +255,15 @@ returns a result `Hash` with these keys:
 | Field | Description |
 | --- | --- |
 | `debut` |  |
-| `family` |  |
-| `id` |  |
-| `images` |  |
-| `jutsu` |  |
-| `name` |  |
-| `natureType` |  |
+| `family` | Character's family members and relationships |
+| `id` | Unique identifier for the character |
+| `images` | URLs to character images |
+| `jutsu` | List of jutsus the character can perform |
+| `name` | Character's name |
+| `natureType` | Character's chakra nature types |
 | `personal` |  |
 | `rank` |  |
-| `uniqueTraits` |  |
+| `uniqueTraits` | Character's unique traits or abilities |
 | `voiceActors` |  |
 
 Operations: List, Load.
@@ -274,9 +274,9 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `characters` |  |
-| `id` |  |
-| `name` |  |
+| `characters` | List of characters belonging to this clan |
+| `id` | Unique identifier for the clan |
+| `name` | Clan name |
 
 Operations: List.
 
@@ -303,15 +303,15 @@ Create an instance: `character = client.Character`
 | Field | Type | Description |
 | --- | --- | --- |
 | `debut` | `Hash` |  |
-| `family` | `Hash` |  |
-| `id` | `Integer` |  |
-| `images` | `Array` |  |
-| `jutsu` | `Array` |  |
-| `name` | `String` |  |
-| `natureType` | `Array` |  |
+| `family` | `Hash` | Character's family members and relationships |
+| `id` | `Integer` | Unique identifier for the character |
+| `images` | `Array` | URLs to character images |
+| `jutsu` | `Array` | List of jutsus the character can perform |
+| `name` | `String` | Character's name |
+| `natureType` | `Array` | Character's chakra nature types |
 | `personal` | `Hash` |  |
 | `rank` | `Hash` |  |
-| `uniqueTraits` | `Array` |  |
+| `uniqueTraits` | `Array` | Character's unique traits or abilities |
 | `voiceActors` | `Hash` |  |
 
 #### Example: Load
@@ -343,9 +343,9 @@ Create an instance: `clan = client.Clan`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `characters` | `Array` |  |
-| `id` | `Integer` |  |
-| `name` | `String` |  |
+| `characters` | `Array` | List of characters belonging to this clan |
+| `id` | `Integer` | Unique identifier for the clan |
+| `name` | `String` | Clan name |
 
 #### Example: List
 

@@ -8,16 +8,19 @@ main: kit: entity: clan: {
     {
       name: "characters"
       req: false
+      short: "List of characters belonging to this clan"
       type: "`$ARRAY`"
     }
     {
       name: "id"
       req: false
+      short: "Unique identifier for the clan"
       type: "`$INTEGER`"
     }
     {
       name: "name"
       req: false
+      short: "Clan name"
       type: "`$STRING`"
     }
   ]

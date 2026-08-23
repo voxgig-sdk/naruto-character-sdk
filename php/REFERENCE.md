@@ -97,15 +97,15 @@ $character = $client->Character();
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `debut` | `array` | No |  |
-| `family` | `array` | No |  |
-| `id` | `int` | No |  |
-| `images` | `array` | No |  |
-| `jutsu` | `array` | No |  |
-| `name` | `string` | No |  |
-| `natureType` | `array` | No |  |
+| `family` | `array` | No | Character's family members and relationships |
+| `id` | `int` | No | Unique identifier for the character |
+| `images` | `array` | No | URLs to character images |
+| `jutsu` | `array` | No | List of jutsus the character can perform |
+| `name` | `string` | No | Character's name |
+| `natureType` | `array` | No | Character's chakra nature types |
 | `personal` | `array` | No |  |
 | `rank` | `array` | No |  |
-| `uniqueTraits` | `array` | No |  |
+| `uniqueTraits` | `array` | No | Character's unique traits or abilities |
 | `voiceActors` | `array` | No |  |
 
 ### Operations
@@ -166,9 +166,9 @@ $clan = $client->Clan();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `characters` | `array` | No |  |
-| `id` | `int` | No |  |
-| `name` | `string` | No |  |
+| `characters` | `array` | No | List of characters belonging to this clan |
+| `id` | `int` | No | Unique identifier for the clan |
+| `name` | `string` | No | Clan name |
 
 ### Operations
 

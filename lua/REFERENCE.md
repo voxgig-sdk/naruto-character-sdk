@@ -95,15 +95,15 @@ local character = client:Character(nil)
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `debut` | `table` | No |  |
-| `family` | `table` | No |  |
-| `id` | `number` | No |  |
-| `images` | `table` | No |  |
-| `jutsu` | `table` | No |  |
-| `name` | `string` | No |  |
-| `natureType` | `table` | No |  |
+| `family` | `table` | No | Character's family members and relationships |
+| `id` | `number` | No | Unique identifier for the character |
+| `images` | `table` | No | URLs to character images |
+| `jutsu` | `table` | No | List of jutsus the character can perform |
+| `name` | `string` | No | Character's name |
+| `natureType` | `table` | No | Character's chakra nature types |
 | `personal` | `table` | No |  |
 | `rank` | `table` | No |  |
-| `uniqueTraits` | `table` | No |  |
+| `uniqueTraits` | `table` | No | Character's unique traits or abilities |
 | `voiceActors` | `table` | No |  |
 
 ### Operations
@@ -164,9 +164,9 @@ local clan = client:Clan(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `characters` | `table` | No |  |
-| `id` | `number` | No |  |
-| `name` | `string` | No |  |
+| `characters` | `table` | No | List of characters belonging to this clan |
+| `id` | `number` | No | Unique identifier for the clan |
+| `name` | `string` | No | Clan name |
 
 ### Operations
 

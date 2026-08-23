@@ -98,15 +98,15 @@ character = client.Character
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `debut` | `Hash` | No |  |
-| `family` | `Hash` | No |  |
-| `id` | `Integer` | No |  |
-| `images` | `Array` | No |  |
-| `jutsu` | `Array` | No |  |
-| `name` | `String` | No |  |
-| `natureType` | `Array` | No |  |
+| `family` | `Hash` | No | Character's family members and relationships |
+| `id` | `Integer` | No | Unique identifier for the character |
+| `images` | `Array` | No | URLs to character images |
+| `jutsu` | `Array` | No | List of jutsus the character can perform |
+| `name` | `String` | No | Character's name |
+| `natureType` | `Array` | No | Character's chakra nature types |
 | `personal` | `Hash` | No |  |
 | `rank` | `Hash` | No |  |
-| `uniqueTraits` | `Array` | No |  |
+| `uniqueTraits` | `Array` | No | Character's unique traits or abilities |
 | `voiceActors` | `Hash` | No |  |
 
 ### Operations
@@ -167,9 +167,9 @@ clan = client.Clan
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `characters` | `Array` | No |  |
-| `id` | `Integer` | No |  |
-| `name` | `String` | No |  |
+| `characters` | `Array` | No | List of characters belonging to this clan |
+| `id` | `Integer` | No | Unique identifier for the clan |
+| `name` | `String` | No | Clan name |
 
 ### Operations
 

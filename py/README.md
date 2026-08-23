@@ -258,15 +258,15 @@ On error, `ok` is `False` and `err` contains the error value.
 | Field | Description |
 | --- | --- |
 | `debut` |  |
-| `family` |  |
-| `id` |  |
-| `images` |  |
-| `jutsu` |  |
-| `name` |  |
-| `natureType` |  |
+| `family` | Character's family members and relationships |
+| `id` | Unique identifier for the character |
+| `images` | URLs to character images |
+| `jutsu` | List of jutsus the character can perform |
+| `name` | Character's name |
+| `natureType` | Character's chakra nature types |
 | `personal` |  |
 | `rank` |  |
-| `uniqueTraits` |  |
+| `uniqueTraits` | Character's unique traits or abilities |
 | `voiceActors` |  |
 
 Operations: List, Load.
@@ -277,9 +277,9 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `characters` |  |
-| `id` |  |
-| `name` |  |
+| `characters` | List of characters belonging to this clan |
+| `id` | Unique identifier for the clan |
+| `name` | Clan name |
 
 Operations: List.
 
@@ -306,15 +306,15 @@ Create an instance: `character = client.Character()`
 | Field | Type | Description |
 | --- | --- | --- |
 | `debut` | `dict` |  |
-| `family` | `dict` |  |
-| `id` | `int` |  |
-| `images` | `list` |  |
-| `jutsu` | `list` |  |
-| `name` | `str` |  |
-| `natureType` | `list` |  |
+| `family` | `dict` | Character's family members and relationships |
+| `id` | `int` | Unique identifier for the character |
+| `images` | `list` | URLs to character images |
+| `jutsu` | `list` | List of jutsus the character can perform |
+| `name` | `str` | Character's name |
+| `natureType` | `list` | Character's chakra nature types |
 | `personal` | `dict` |  |
 | `rank` | `dict` |  |
-| `uniqueTraits` | `list` |  |
+| `uniqueTraits` | `list` | Character's unique traits or abilities |
 | `voiceActors` | `dict` |  |
 
 #### Example: Load
@@ -344,9 +344,9 @@ Create an instance: `clan = client.Clan()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `characters` | `list` |  |
-| `id` | `int` |  |
-| `name` | `str` |  |
+| `characters` | `list` | List of characters belonging to this clan |
+| `id` | `int` | Unique identifier for the clan |
+| `name` | `str` | Clan name |
 
 #### Example: List
 

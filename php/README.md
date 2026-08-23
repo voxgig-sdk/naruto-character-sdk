@@ -265,15 +265,15 @@ On error, `ok` is `false` and `$err` contains the error value.
 | Field | Description |
 | --- | --- |
 | `debut` |  |
-| `family` |  |
-| `id` |  |
-| `images` |  |
-| `jutsu` |  |
-| `name` |  |
-| `natureType` |  |
+| `family` | Character's family members and relationships |
+| `id` | Unique identifier for the character |
+| `images` | URLs to character images |
+| `jutsu` | List of jutsus the character can perform |
+| `name` | Character's name |
+| `natureType` | Character's chakra nature types |
 | `personal` |  |
 | `rank` |  |
-| `uniqueTraits` |  |
+| `uniqueTraits` | Character's unique traits or abilities |
 | `voiceActors` |  |
 
 Operations: List, Load.
@@ -284,9 +284,9 @@ API path: `/character`
 
 | Field | Description |
 | --- | --- |
-| `characters` |  |
-| `id` |  |
-| `name` |  |
+| `characters` | List of characters belonging to this clan |
+| `id` | Unique identifier for the clan |
+| `name` | Clan name |
 
 Operations: List.
 
@@ -313,15 +313,15 @@ Create an instance: `$character = $client->Character();`
 | Field | Type | Description |
 | --- | --- | --- |
 | `debut` | `array` |  |
-| `family` | `array` |  |
-| `id` | `int` |  |
-| `images` | `array` |  |
-| `jutsu` | `array` |  |
-| `name` | `string` |  |
-| `natureType` | `array` |  |
+| `family` | `array` | Character's family members and relationships |
+| `id` | `int` | Unique identifier for the character |
+| `images` | `array` | URLs to character images |
+| `jutsu` | `array` | List of jutsus the character can perform |
+| `name` | `string` | Character's name |
+| `natureType` | `array` | Character's chakra nature types |
 | `personal` | `array` |  |
 | `rank` | `array` |  |
-| `uniqueTraits` | `array` |  |
+| `uniqueTraits` | `array` | Character's unique traits or abilities |
 | `voiceActors` | `array` |  |
 
 #### Example: Load
@@ -353,9 +353,9 @@ Create an instance: `$clan = $client->Clan();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `characters` | `array` |  |
-| `id` | `int` |  |
-| `name` | `string` |  |
+| `characters` | `array` | List of characters belonging to this clan |
+| `id` | `int` | Unique identifier for the clan |
+| `name` | `string` | Clan name |
 
 #### Example: List
 

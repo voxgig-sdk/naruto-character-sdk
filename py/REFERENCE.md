@@ -92,15 +92,15 @@ character = client.Character()
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `debut` | `dict` | No |  |
-| `family` | `dict` | No |  |
-| `id` | `int` | No |  |
-| `images` | `list` | No |  |
-| `jutsu` | `list` | No |  |
-| `name` | `str` | No |  |
-| `natureType` | `list` | No |  |
+| `family` | `dict` | No | Character's family members and relationships |
+| `id` | `int` | No | Unique identifier for the character |
+| `images` | `list` | No | URLs to character images |
+| `jutsu` | `list` | No | List of jutsus the character can perform |
+| `name` | `str` | No | Character's name |
+| `natureType` | `list` | No | Character's chakra nature types |
 | `personal` | `dict` | No |  |
 | `rank` | `dict` | No |  |
-| `uniqueTraits` | `list` | No |  |
+| `uniqueTraits` | `list` | No | Character's unique traits or abilities |
 | `voiceActors` | `dict` | No |  |
 
 ### Operations
@@ -162,9 +162,9 @@ clan = client.Clan()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `characters` | `list` | No |  |
-| `id` | `int` | No |  |
-| `name` | `str` | No |  |
+| `characters` | `list` | No | List of characters belonging to this clan |
+| `id` | `int` | No | Unique identifier for the clan |
+| `name` | `str` | No | Clan name |
 
 ### Operations
 
