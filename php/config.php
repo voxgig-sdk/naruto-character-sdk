@@ -42,6 +42,7 @@ class NarutoCharacterConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
