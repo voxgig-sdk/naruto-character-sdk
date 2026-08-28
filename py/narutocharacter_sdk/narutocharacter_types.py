@@ -35,17 +35,9 @@ class CharacterLoadMatch(TypedDict):
 
 
 class CharacterListMatch(TypedDict, total=False):
-    debut: dict
-    family: dict
-    id: int
-    images: list
-    jutsu: list
+    limit: int
     name: str
-    natureType: list
-    personal: dict
-    rank: dict
-    uniqueTraits: list
-    voiceActors: dict
+    page: int
 
 
 class Clan(TypedDict, total=False):
@@ -55,6 +47,5 @@ class Clan(TypedDict, total=False):
 
 
 class ClanListMatch(TypedDict, total=False):
-    characters: list
-    id: int
-    name: str
+    limit: int
+    page: int

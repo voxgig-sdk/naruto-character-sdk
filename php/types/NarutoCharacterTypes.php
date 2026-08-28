@@ -37,17 +37,9 @@ class CharacterLoadMatch
 /** Request payload for Character#list. */
 class CharacterListMatch
 {
-    public ?array $debut = null;
-    public ?array $family = null;
-    public ?int $id = null;
-    public ?array $images = null;
-    public ?array $jutsu = null;
+    public ?int $limit = null;
     public ?string $name = null;
-    public ?array $natureType = null;
-    public ?array $personal = null;
-    public ?array $rank = null;
-    public ?array $uniqueTraits = null;
-    public ?array $voiceActors = null;
+    public ?int $page = null;
 }
 
 /** Clan entity data model. */
@@ -61,8 +53,7 @@ class Clan
 /** Request payload for Clan#list. */
 class ClanListMatch
 {
-    public ?array $characters = null;
-    public ?int $id = null;
-    public ?string $name = null;
+    public ?int $limit = null;
+    public ?int $page = null;
 }
 

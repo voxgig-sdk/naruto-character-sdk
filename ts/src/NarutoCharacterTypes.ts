@@ -24,17 +24,9 @@ export interface CharacterLoadMatch {
 }
 
 export interface CharacterListMatch {
-  debut?: Record<string, any>
-  family?: Record<string, any>
-  id?: number
-  images?: any[]
-  jutsu?: any[]
+  limit?: number
   name?: string
-  natureType?: any[]
-  personal?: Record<string, any>
-  rank?: Record<string, any>
-  uniqueTraits?: any[]
-  voiceActors?: Record<string, any>
+  page?: number
 }
 
 export interface Clan {
@@ -44,8 +36,7 @@ export interface Clan {
 }
 
 export interface ClanListMatch {
-  characters?: any[]
-  id?: number
-  name?: string
+  limit?: number
+  page?: number
 }
 

@@ -68,50 +68,18 @@ CharacterLoadMatch = Struct.new(
 
 # Request payload for Character#list.
 #
-# @!attribute [rw] debut
-#   @return [Hash, nil]
-#
-# @!attribute [rw] family
-#   @return [Hash, nil]
-#
-# @!attribute [rw] id
+# @!attribute [rw] limit
 #   @return [Integer, nil]
-#
-# @!attribute [rw] images
-#   @return [Array, nil]
-#
-# @!attribute [rw] jutsu
-#   @return [Array, nil]
 #
 # @!attribute [rw] name
 #   @return [String, nil]
 #
-# @!attribute [rw] natureType
-#   @return [Array, nil]
-#
-# @!attribute [rw] personal
-#   @return [Hash, nil]
-#
-# @!attribute [rw] rank
-#   @return [Hash, nil]
-#
-# @!attribute [rw] uniqueTraits
-#   @return [Array, nil]
-#
-# @!attribute [rw] voiceActors
-#   @return [Hash, nil]
+# @!attribute [rw] page
+#   @return [Integer, nil]
 CharacterListMatch = Struct.new(
-  :debut,
-  :family,
-  :id,
-  :images,
-  :jutsu,
+  :limit,
   :name,
-  :natureType,
-  :personal,
-  :rank,
-  :uniqueTraits,
-  :voiceActors,
+  :page,
   keyword_init: true
 )
 
@@ -134,18 +102,14 @@ Clan = Struct.new(
 
 # Request payload for Clan#list.
 #
-# @!attribute [rw] characters
-#   @return [Array, nil]
-#
-# @!attribute [rw] id
+# @!attribute [rw] limit
 #   @return [Integer, nil]
 #
-# @!attribute [rw] name
-#   @return [String, nil]
+# @!attribute [rw] page
+#   @return [Integer, nil]
 ClanListMatch = Struct.new(
-  :characters,
-  :id,
-  :name,
+  :limit,
+  :page,
   keyword_init: true
 )
 

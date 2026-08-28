@@ -34,17 +34,9 @@ type CharacterLoadMatch struct {
 
 // CharacterListMatch is the typed request payload for Character.ListTyped.
 type CharacterListMatch struct {
-	Debut *map[string]any `json:"debut,omitempty"`
-	Family *map[string]any `json:"family,omitempty"`
-	Id *int `json:"id,omitempty"`
-	Images *[]any `json:"images,omitempty"`
-	Jutsu *[]any `json:"jutsu,omitempty"`
+	Limit *int `json:"limit,omitempty"`
 	Name *string `json:"name,omitempty"`
-	NatureType *[]any `json:"natureType,omitempty"`
-	Personal *map[string]any `json:"personal,omitempty"`
-	Rank *map[string]any `json:"rank,omitempty"`
-	UniqueTraits *[]any `json:"uniqueTraits,omitempty"`
-	VoiceActors *map[string]any `json:"voiceActors,omitempty"`
+	Page *int `json:"page,omitempty"`
 }
 
 // Clan is the typed data model for the clan entity.
@@ -56,9 +48,8 @@ type Clan struct {
 
 // ClanListMatch is the typed request payload for Clan.ListTyped.
 type ClanListMatch struct {
-	Characters *[]any `json:"characters,omitempty"`
-	Id *int `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
+	Limit *int `json:"limit,omitempty"`
+	Page *int `json:"page,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the
