@@ -96,6 +96,10 @@ module NarutoCharacterConfig
               "type" => "`$OBJECT`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "character",
           "op" => {
             "list" => {
@@ -130,8 +134,10 @@ module NarutoCharacterConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/character",
-                  "parts" => [
-                    "character",
+                  "segments" => [
+                    {
+                      "lit" => "character",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -144,6 +150,9 @@ module NarutoCharacterConfig
                     "req" => "`reqdata`",
                     "res" => "`body.characters`",
                   },
+                  "parts" => [
+                    "character",
+                  ],
                 },
               ],
             },
@@ -166,9 +175,13 @@ module NarutoCharacterConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/character/{id}",
-                  "parts" => [
-                    "character",
-                    "{id}",
+                  "segments" => [
+                    {
+                      "lit" => "character",
+                    },
+                    {
+                      "var" => "id",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -179,6 +192,10 @@ module NarutoCharacterConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "character",
+                    "{id}",
+                  ],
                 },
               ],
             },
@@ -205,6 +222,10 @@ module NarutoCharacterConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "clan",
           "op" => {
             "list" => {
@@ -233,8 +254,10 @@ module NarutoCharacterConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/clan",
-                  "parts" => [
-                    "clan",
+                  "segments" => [
+                    {
+                      "lit" => "clan",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -246,6 +269,9 @@ module NarutoCharacterConfig
                     "req" => "`reqdata`",
                     "res" => "`body.clans`",
                   },
+                  "parts" => [
+                    "clan",
+                  ],
                 },
               ],
             },

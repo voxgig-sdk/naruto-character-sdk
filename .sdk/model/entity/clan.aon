@@ -58,8 +58,10 @@ main: kit: entity: clan: {
           }
           method: "GET"
           orig: "/clan"
-          parts: [
-            "clan"
+          segments: [
+            {
+              lit: "clan"
+            }
           ]
           select: {
             exist: [

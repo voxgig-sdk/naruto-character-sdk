@@ -1,6 +1,14 @@
 # NarutoCharacter SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -105,6 +113,10 @@ def make_config():
             "type": "`$OBJECT`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "character",
         "op": {
           "list": {
@@ -139,8 +151,10 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/character",
-                "parts": [
-                  "character",
+                "segments": [
+                  {
+                    "lit": "character",
+                  },
                 ],
                 "select": {
                   "exist": [
@@ -153,6 +167,9 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body.characters`",
                 },
+                "parts": [
+                  "character",
+                ],
               },
             ],
           },
@@ -175,9 +192,13 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/character/{id}",
-                "parts": [
-                  "character",
-                  "{id}",
+                "segments": [
+                  {
+                    "lit": "character",
+                  },
+                  {
+                    "var": "id",
+                  },
                 ],
                 "select": {
                   "exist": [
@@ -188,6 +209,10 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "character",
+                  "{id}",
+                ],
               },
             ],
           },
@@ -214,6 +239,10 @@ def make_config():
             "type": "`$STRING`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "clan",
         "op": {
           "list": {
@@ -242,8 +271,10 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/clan",
-                "parts": [
-                  "clan",
+                "segments": [
+                  {
+                    "lit": "clan",
+                  },
                 ],
                 "select": {
                   "exist": [
@@ -255,6 +286,9 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body.clans`",
                 },
+                "parts": [
+                  "clan",
+                ],
               },
             ],
           },

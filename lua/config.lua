@@ -84,6 +84,10 @@ local function make_config()
             ["type"] = "`$OBJECT`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "character",
         ["op"] = {
           ["list"] = {
@@ -118,8 +122,10 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/character",
-                ["parts"] = {
-                  "character",
+                ["segments"] = {
+                  {
+                    ["lit"] = "character",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -131,6 +137,9 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.characters`",
+                },
+                ["parts"] = {
+                  "character",
                 },
               },
             },
@@ -154,9 +163,13 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/character/{id}",
-                ["parts"] = {
-                  "character",
-                  "{id}",
+                ["segments"] = {
+                  {
+                    ["lit"] = "character",
+                  },
+                  {
+                    ["var"] = "id",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -166,6 +179,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "character",
+                  "{id}",
                 },
               },
             },
@@ -192,6 +209,10 @@ local function make_config()
             ["short"] = "Clan name",
             ["type"] = "`$STRING`",
           },
+        },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
         },
         ["name"] = "clan",
         ["op"] = {
@@ -221,8 +242,10 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/clan",
-                ["parts"] = {
-                  "clan",
+                ["segments"] = {
+                  {
+                    ["lit"] = "clan",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -233,6 +256,9 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.clans`",
+                },
+                ["parts"] = {
+                  "clan",
                 },
               },
             },
