@@ -105,7 +105,7 @@ local results, err = client:Character():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
+| TypeScript | `@voxgig-sdk/naruto-character-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
 | Python | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
 | PHP | `voxgig-sdk/naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/naruto-character-sdk/go` | `go get github.com/voxgig-sdk/naruto-character-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Character():list()
 ### TypeScript
 
 ```ts
-import { NarutoCharacterSDK } from '@voxgig-sdk/naruto-character'
+import { NarutoCharacterSDK } from '@voxgig-sdk/naruto-character-sdk'
 
 const client = new NarutoCharacterSDK()
 
