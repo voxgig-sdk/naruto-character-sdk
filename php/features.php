@@ -4,7 +4,10 @@ declare(strict_types=1);
 // NarutoCharacter SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class NarutoCharacterFeatures
@@ -14,8 +17,14 @@ class NarutoCharacterFeatures
         switch ($name) {
             case "base":
                 return new NarutoCharacterBaseFeature();
+            case "ratelimit":
+                return new NarutoCharacterRatelimitFeature();
+            case "retry":
+                return new NarutoCharacterRetryFeature();
             case "test":
                 return new NarutoCharacterTestFeature();
+            case "timeout":
+                return new NarutoCharacterTimeoutFeature();
             default:
                 return new NarutoCharacterBaseFeature();
         }
@@ -31,7 +40,10 @@ class NarutoCharacterFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

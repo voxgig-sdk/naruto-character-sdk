@@ -1,12 +1,18 @@
 # NarutoCharacter SDK feature factory
 
 from narutocharacter_sdk.feature.base_feature import NarutoCharacterBaseFeature
+from narutocharacter_sdk.feature.ratelimit_feature import NarutoCharacterRatelimitFeature
+from narutocharacter_sdk.feature.retry_feature import NarutoCharacterRetryFeature
 from narutocharacter_sdk.feature.test_feature import NarutoCharacterTestFeature
+from narutocharacter_sdk.feature.timeout_feature import NarutoCharacterTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: NarutoCharacterBaseFeature(),
+    "ratelimit": lambda: NarutoCharacterRatelimitFeature(),
+    "retry": lambda: NarutoCharacterRetryFeature(),
     "test": lambda: NarutoCharacterTestFeature(),
+    "timeout": lambda: NarutoCharacterTimeoutFeature(),
 }
 
 
