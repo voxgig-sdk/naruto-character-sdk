@@ -105,12 +105,12 @@ local results, err = client:Character():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/naruto-character-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
-| Python | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
-| PHP | `voxgig-sdk/naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
+| TypeScript | `@voxgig-sdk/naruto-character-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/tags) |
+| Python | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/tags) |
+| PHP | `voxgig-sdk/naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/naruto-character-sdk/go` | `go get github.com/voxgig-sdk/naruto-character-sdk/go@latest` |
-| Ruby | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
-| Lua | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/releases) |
+| Ruby | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/tags) |
+| Lua | `voxgig-sdk-naruto-character` | publish pending — [install from git tag](https://github.com/voxgig-sdk/naruto-character-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/naruto-character-sdk/go-cli` | `go install github.com/voxgig-sdk/naruto-character-sdk/go-cli/cmd/naruto-character@latest` |
 | Go MCP server | `github.com/voxgig-sdk/naruto-character-sdk/go-mcp` | `go get github.com/voxgig-sdk/naruto-character-sdk/go-mcp@latest` |
 

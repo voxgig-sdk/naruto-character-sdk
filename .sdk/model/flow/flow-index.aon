@@ -1,4 +1,4 @@
 # Flows
 
-@"BasicCharacterFlow.aon"
-@"BasicClanFlow.aon"
+@"./BasicCharacterFlow.aon"
+@"./BasicClanFlow.aon"
