@@ -92,53 +92,64 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "debut",
+						"title": "Debut",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "family",
-						"short": "Character's family members and relationships",
+						"title": "Family",
 						"type": "`$OBJECT`",
+						"short": "Character's family members and relationships",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Unique identifier for the character",
+						"title": "Id",
 						"type": "`$INTEGER`",
+						"short": "Unique identifier for the character",
 					},
 					map[string]any{
 						"name": "images",
-						"short": "URLs to character images",
+						"title": "Images",
 						"type": "`$ARRAY`",
+						"short": "URLs to character images",
 					},
 					map[string]any{
 						"name": "jutsu",
-						"short": "List of jutsus the character can perform",
+						"title": "Jutsu",
 						"type": "`$ARRAY`",
+						"short": "List of jutsus the character can perform",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Character's name",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Character's name",
 					},
 					map[string]any{
 						"name": "natureType",
-						"short": "Character's chakra nature types",
+						"title": "Nature Type",
 						"type": "`$ARRAY`",
+						"short": "Character's chakra nature types",
 					},
 					map[string]any{
 						"name": "personal",
+						"title": "Personal",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "rank",
+						"title": "Rank",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "uniqueTraits",
-						"short": "Character's unique traits or abilities",
+						"title": "Unique Traits",
 						"type": "`$ARRAY`",
+						"short": "Character's unique traits or abilities",
 					},
 					map[string]any{
 						"name": "voiceActors",
+						"title": "Voice Actors",
 						"type": "`$OBJECT`",
 					},
 				},
@@ -153,36 +164,44 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"example": 20,
-											"kind": "query",
-											"name": "limit",
-											"orig": "limit",
-											"type": "`$INTEGER`",
-										},
-										map[string]any{
-											"kind": "query",
-											"name": "name",
-											"orig": "name",
-											"type": "`$STRING`",
-										},
-										map[string]any{
-											"example": 1,
-											"kind": "query",
-											"name": "page",
-											"orig": "page",
-											"type": "`$INTEGER`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/character",
 								"segments": []any{
 									map[string]any{
 										"lit": "character",
+									},
+								},
+								"parts": []any{
+									"character",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body.characters`",
+								},
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "limit",
+											"orig": "limit",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"example": 20,
+										},
+										map[string]any{
+											"name": "name",
+											"orig": "name",
+											"type": "`$STRING`",
+											"kind": "query",
+										},
+										map[string]any{
+											"name": "page",
+											"orig": "page",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"example": 1,
+										},
 									},
 								},
 								"select": map[string]any{
@@ -192,13 +211,6 @@ func MakeConfig() map[string]any {
 										"page",
 									},
 								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body.characters`",
-								},
-								"parts": []any{
-									"character",
-								},
 							},
 						},
 					},
@@ -207,17 +219,6 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"kind": "param",
-											"name": "id",
-											"orig": "id",
-											"reqd": true,
-											"type": "`$INTEGER`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/character/{id}",
@@ -229,18 +230,30 @@ func MakeConfig() map[string]any {
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"id",
-									},
+								"parts": []any{
+									"character",
+									"{id}",
 								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"character",
-									"{id}",
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "id",
+											"type": "`$INTEGER`",
+											"kind": "param",
+											"reqd": true,
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"id",
+									},
 								},
 							},
 						},
@@ -254,18 +267,21 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "characters",
-						"short": "List of characters belonging to this clan",
+						"title": "Characters",
 						"type": "`$ARRAY`",
+						"short": "List of characters belonging to this clan",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Unique identifier for the clan",
+						"title": "Id",
 						"type": "`$INTEGER`",
+						"short": "Unique identifier for the clan",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Clan name",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Clan name",
 					},
 				},
 				"id": map[string]any{
@@ -279,24 +295,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"example": 20,
-											"kind": "query",
-											"name": "limit",
-											"orig": "limit",
-											"type": "`$INTEGER`",
-										},
-										map[string]any{
-											"example": 1,
-											"kind": "query",
-											"name": "page",
-											"orig": "page",
-											"type": "`$INTEGER`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/clan",
@@ -305,18 +303,37 @@ func MakeConfig() map[string]any {
 										"lit": "clan",
 									},
 								},
+								"parts": []any{
+									"clan",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body.clans`",
+								},
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "limit",
+											"orig": "limit",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"example": 20,
+										},
+										map[string]any{
+											"name": "page",
+											"orig": "page",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"example": 1,
+										},
+									},
+								},
 								"select": map[string]any{
 									"exist": []any{
 										"limit",
 										"page",
 									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body.clans`",
-								},
-								"parts": []any{
-									"clan",
 								},
 							},
 						},

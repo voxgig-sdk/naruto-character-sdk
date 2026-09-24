@@ -1,7 +1,7 @@
 // Typed models for the NarutoCharacter SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,17 +14,6 @@ import (
 
 // Character is the typed data model for the character entity.
 type Character struct {
-	Debut *map[string]any `json:"debut,omitempty"`
-	Family *map[string]any `json:"family,omitempty"`
-	Id *int `json:"id,omitempty"`
-	Images *[]any `json:"images,omitempty"`
-	Jutsu *[]any `json:"jutsu,omitempty"`
-	Name *string `json:"name,omitempty"`
-	NatureType *[]any `json:"natureType,omitempty"`
-	Personal *map[string]any `json:"personal,omitempty"`
-	Rank *map[string]any `json:"rank,omitempty"`
-	UniqueTraits *[]any `json:"uniqueTraits,omitempty"`
-	VoiceActors *map[string]any `json:"voiceActors,omitempty"`
 }
 
 // CharacterLoadMatch is the typed request payload for Character.LoadTyped.
@@ -41,9 +30,6 @@ type CharacterListMatch struct {
 
 // Clan is the typed data model for the clan entity.
 type Clan struct {
-	Characters *[]any `json:"characters,omitempty"`
-	Id *int `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
 }
 
 // ClanListMatch is the typed request payload for Clan.ListTyped.

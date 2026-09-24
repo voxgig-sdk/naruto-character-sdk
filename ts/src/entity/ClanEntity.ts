@@ -19,7 +19,6 @@ import type {
   ClanListMatch,
 } from '../NarutoCharacterTypes'
 
-// TODO: needs Entity superclass
 class ClanEntity extends NarutoCharacterEntityBase<Clan> {
 
   constructor(client: NarutoCharacterSDK, entopts: any) {

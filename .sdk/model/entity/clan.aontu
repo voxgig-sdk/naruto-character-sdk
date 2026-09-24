@@ -1,0 +1,91 @@
+# Entity: clan
+
+main: kit: entity: clan: {
+
+  alias: field: {}
+
+  fields: {
+    characters: {
+      h: "Characters"
+      n: "characters"
+      r: false
+      sh: "List of characters belonging to this clan"
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      sh: "Unique identifier for the clan"
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      sh: "Clan name"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "clan"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /clan"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/clan"
+          q: {
+            exist: [
+              "limit"
+              "page"
+            ]
+          }
+          s: [
+            {
+              lit: "clan"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.clans`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

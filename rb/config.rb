@@ -100,53 +100,64 @@ module NarutoCharacterConfig
           "fields" => [
             {
               "name" => "debut",
+              "title" => "Debut",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "family",
-              "short" => "Character's family members and relationships",
+              "title" => "Family",
               "type" => "`$OBJECT`",
+              "short" => "Character's family members and relationships",
             },
             {
               "name" => "id",
-              "short" => "Unique identifier for the character",
+              "title" => "Id",
               "type" => "`$INTEGER`",
+              "short" => "Unique identifier for the character",
             },
             {
               "name" => "images",
-              "short" => "URLs to character images",
+              "title" => "Images",
               "type" => "`$ARRAY`",
+              "short" => "URLs to character images",
             },
             {
               "name" => "jutsu",
-              "short" => "List of jutsus the character can perform",
+              "title" => "Jutsu",
               "type" => "`$ARRAY`",
+              "short" => "List of jutsus the character can perform",
             },
             {
               "name" => "name",
-              "short" => "Character's name",
+              "title" => "Name",
               "type" => "`$STRING`",
+              "short" => "Character's name",
             },
             {
               "name" => "natureType",
-              "short" => "Character's chakra nature types",
+              "title" => "Nature Type",
               "type" => "`$ARRAY`",
+              "short" => "Character's chakra nature types",
             },
             {
               "name" => "personal",
+              "title" => "Personal",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "rank",
+              "title" => "Rank",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "uniqueTraits",
-              "short" => "Character's unique traits or abilities",
+              "title" => "Unique Traits",
               "type" => "`$ARRAY`",
+              "short" => "Character's unique traits or abilities",
             },
             {
               "name" => "voiceActors",
+              "title" => "Voice Actors",
               "type" => "`$OBJECT`",
             },
           ],
@@ -161,30 +172,6 @@ module NarutoCharacterConfig
               "name" => "list",
               "points" => [
                 {
-                  "args" => {
-                    "query" => [
-                      {
-                        "example" => 20,
-                        "kind" => "query",
-                        "name" => "limit",
-                        "orig" => "limit",
-                        "type" => "`$INTEGER`",
-                      },
-                      {
-                        "kind" => "query",
-                        "name" => "name",
-                        "orig" => "name",
-                        "type" => "`$STRING`",
-                      },
-                      {
-                        "example" => 1,
-                        "kind" => "query",
-                        "name" => "page",
-                        "orig" => "page",
-                        "type" => "`$INTEGER`",
-                      },
-                    ],
-                  },
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/character",
@@ -193,6 +180,38 @@ module NarutoCharacterConfig
                       "lit" => "character",
                     },
                   ],
+                  "parts" => [
+                    "character",
+                  ],
+                  "rename" => {},
+                  "transform" => {
+                    "req" => "`reqdata`",
+                    "res" => "`body.characters`",
+                  },
+                  "args" => {
+                    "query" => [
+                      {
+                        "name" => "limit",
+                        "orig" => "limit",
+                        "type" => "`$INTEGER`",
+                        "kind" => "query",
+                        "example" => 20,
+                      },
+                      {
+                        "name" => "name",
+                        "orig" => "name",
+                        "type" => "`$STRING`",
+                        "kind" => "query",
+                      },
+                      {
+                        "name" => "page",
+                        "orig" => "page",
+                        "type" => "`$INTEGER`",
+                        "kind" => "query",
+                        "example" => 1,
+                      },
+                    ],
+                  },
                   "select" => {
                     "exist" => [
                       "limit",
@@ -200,13 +219,6 @@ module NarutoCharacterConfig
                       "page",
                     ],
                   },
-                  "transform" => {
-                    "req" => "`reqdata`",
-                    "res" => "`body.characters`",
-                  },
-                  "parts" => [
-                    "character",
-                  ],
                 },
               ],
             },
@@ -215,17 +227,6 @@ module NarutoCharacterConfig
               "name" => "load",
               "points" => [
                 {
-                  "args" => {
-                    "params" => [
-                      {
-                        "kind" => "param",
-                        "name" => "id",
-                        "orig" => "id",
-                        "reqd" => true,
-                        "type" => "`$INTEGER`",
-                      },
-                    ],
-                  },
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/character/{id}",
@@ -237,19 +238,31 @@ module NarutoCharacterConfig
                       "var" => "id",
                     },
                   ],
+                  "parts" => [
+                    "character",
+                    "{id}",
+                  ],
+                  "rename" => {},
+                  "transform" => {
+                    "req" => "`reqdata`",
+                    "res" => "`body`",
+                  },
+                  "args" => {
+                    "params" => [
+                      {
+                        "name" => "id",
+                        "orig" => "id",
+                        "type" => "`$INTEGER`",
+                        "kind" => "param",
+                        "reqd" => true,
+                      },
+                    ],
+                  },
                   "select" => {
                     "exist" => [
                       "id",
                     ],
                   },
-                  "transform" => {
-                    "req" => "`reqdata`",
-                    "res" => "`body`",
-                  },
-                  "parts" => [
-                    "character",
-                    "{id}",
-                  ],
                 },
               ],
             },
@@ -262,18 +275,21 @@ module NarutoCharacterConfig
           "fields" => [
             {
               "name" => "characters",
-              "short" => "List of characters belonging to this clan",
+              "title" => "Characters",
               "type" => "`$ARRAY`",
+              "short" => "List of characters belonging to this clan",
             },
             {
               "name" => "id",
-              "short" => "Unique identifier for the clan",
+              "title" => "Id",
               "type" => "`$INTEGER`",
+              "short" => "Unique identifier for the clan",
             },
             {
               "name" => "name",
-              "short" => "Clan name",
+              "title" => "Name",
               "type" => "`$STRING`",
+              "short" => "Clan name",
             },
           ],
           "id" => {
@@ -287,24 +303,6 @@ module NarutoCharacterConfig
               "name" => "list",
               "points" => [
                 {
-                  "args" => {
-                    "query" => [
-                      {
-                        "example" => 20,
-                        "kind" => "query",
-                        "name" => "limit",
-                        "orig" => "limit",
-                        "type" => "`$INTEGER`",
-                      },
-                      {
-                        "example" => 1,
-                        "kind" => "query",
-                        "name" => "page",
-                        "orig" => "page",
-                        "type" => "`$INTEGER`",
-                      },
-                    ],
-                  },
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/clan",
@@ -313,19 +311,38 @@ module NarutoCharacterConfig
                       "lit" => "clan",
                     },
                   ],
+                  "parts" => [
+                    "clan",
+                  ],
+                  "rename" => {},
+                  "transform" => {
+                    "req" => "`reqdata`",
+                    "res" => "`body.clans`",
+                  },
+                  "args" => {
+                    "query" => [
+                      {
+                        "name" => "limit",
+                        "orig" => "limit",
+                        "type" => "`$INTEGER`",
+                        "kind" => "query",
+                        "example" => 20,
+                      },
+                      {
+                        "name" => "page",
+                        "orig" => "page",
+                        "type" => "`$INTEGER`",
+                        "kind" => "query",
+                        "example" => 1,
+                      },
+                    ],
+                  },
                   "select" => {
                     "exist" => [
                       "limit",
                       "page",
                     ],
                   },
-                  "transform" => {
-                    "req" => "`reqdata`",
-                    "res" => "`body.clans`",
-                  },
-                  "parts" => [
-                    "clan",
-                  ],
                 },
               ],
             },

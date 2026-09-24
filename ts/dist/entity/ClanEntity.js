@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ClanEntity = void 0;
 const NarutoCharacterEntityBase_1 = require("../NarutoCharacterEntityBase");
-// TODO: needs Entity superclass
 class ClanEntity extends NarutoCharacterEntityBase_1.NarutoCharacterEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

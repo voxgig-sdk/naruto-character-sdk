@@ -1,0 +1,22 @@
+# BasicClanFlow
+
+main: kit: flow: BasicClanFlow:
+{
+  entity: "clan",
+  kind: "basic",
+  name: "BasicClanFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "clan_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClanFlow"
+}
